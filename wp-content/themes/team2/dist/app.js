@@ -14286,325 +14286,507 @@ var _default = {
     garesIdf: String,
     forwardPostsString: String,
     allPostsString: String
-  } // methods: {
-  //     autocomplete(){
-  //         const options = {
-  //             componentRestrictions: {country: 'fr'}
-  //         };
-  //         const flagStart = new Leaflet.Icon({
-  //             iconUrl: `${this.baseURL}/flag-start.png`,
-  //             shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-  //             iconSize: [46, 46],
-  //             iconAnchor: [12, 41],
-  //             popupAnchor: [1, -34],
-  //             shadowSize: [41, 41]
-  //         });
-  //         const flagEnd = new Leaflet.Icon({
-  //             iconUrl: `${this.baseURL}/flag-end.png`,
-  //             shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-  //             iconSize: [46, 46],
-  //             iconAnchor: [12, 41],
-  //             popupAnchor: [1, -34],
-  //             shadowSize: [41, 41]
-  //         });
-  //         const autocompleteStart = new google.maps.places.Autocomplete(this.$refs.autocompleteStart, options);
-  //         autocompleteStart.setFields(
-  //         ['address_components', 'geometry', 'icon', 'name']);
-  //         autocompleteStart.addListener('place_changed', ()=>{
-  //             let place = autocompleteStart.getPlace()
-  //             this.startingPointGeometry.lat = place.geometry.location.lat()
-  //             this.startingPointGeometry.long = place.geometry.location.lng()
-  //             this.startingPointLayerGroup.clearLayers()
-  //             Leaflet.marker([this.startingPointGeometry.lat, this.startingPointGeometry.long], {icon: flagStart, zIndexOffset: 101}).addTo(this.startingPointLayerGroup)
-  //         })
-  //         const autocompleteEnd = new google.maps.places.Autocomplete(this.$refs.autocompleteEnd, options);
-  //         autocompleteEnd.setFields(
-  //             ['address_components', 'geometry', 'icon', 'name']);
-  //         autocompleteEnd.addListener('place_changed', ()=>{
-  //             let place = autocompleteEnd.getPlace()
-  //             this.endPointGeometry.lat = place.geometry.location.lat()
-  //             this.endPointGeometry.long = place.geometry.location.lng()
-  //             this.endPointLayerGroup.clearLayers()
-  //             Leaflet.marker([this.endPointGeometry.lat, this.endPointGeometry.long], {icon: flagEnd, zIndexOffset: 100}).addTo(this.endPointLayerGroup)
-  //         })
-  //     },
-  //     getRandom(arr, n) {
-  //         const result = new Array(n)
-  //         let len = arr.length
-  //         const taken = new Array(len);
-  //         if (n > len)
-  //             throw new RangeError("getRandom: more elements taken than available");
-  //         while (n--) {
-  //             const x = Math.floor(Math.random() * len);
-  //             result[n] = arr[x in taken ? taken[x] : x];
-  //             taken[x] = --len in taken ? taken[len] : len;
-  //         }
-  //         return result;
-  //     },
-  //     mapInit(){
-  //         this.map = Leaflet.map('map').setView([48.85319519851149, 2.3305100714906075], 10);
-  //         Leaflet.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
-  //             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://maps.google.com/">Google</a>',
-  //             maxZoom: 20,
-  //             subdomains:['mt0','mt1','mt2','mt3']
-  //         }).addTo(this.map)
-  //         this.covoitLayerGroup = Leaflet.layerGroup().addTo(this.map)
-  //         this.elecLayerGroup = Leaflet.layerGroup().addTo(this.map)
-  //         this.garesFranceLayerGroup = Leaflet.layerGroup().addTo(this.map)
-  //         this.veloLibresLayerGroup = Leaflet.layerGroup().addTo(this.map)
-  //         this.parkingVeloLayerGroup = Leaflet.layerGroup().addTo(this.map)
-  //         this.garesIdfLayerGroup = Leaflet.layerGroup().addTo(this.map)
-  //         this.startingPointLayerGroup = Leaflet.layerGroup().addTo(this.map)
-  //         this.endPointLayerGroup = Leaflet.layerGroup().addTo(this.map)
-  //     },
-  //     loadVeloLibres(_e){
-  //         const greenIcon = new Leaflet.Icon({
-  //             iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
-  //             shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-  //             iconSize: [25, 41],
-  //             iconAnchor: [12, 41],
-  //             popupAnchor: [1, -34],
-  //             shadowSize: [41, 41]
-  //         });
-  //         if (_e.target.checked) {
-  //             for (const _place of this.veloLibresPlaces) {
-  //                 let marker = Leaflet.marker([_place.geometry.coordinates[1], _place.geometry.coordinates[0]], {icon: greenIcon}).addTo(this.veloLibresLayerGroup)
-  //                 marker.bindPopup(`<strong>${_place.fields.name}</strong>`)
-  //             }
-  //             window.clearInterval(this.displayedInterval)
-  //             this.displayedPost = this.allPosts.filter(post => post.transport_type === 'velo')[0]
-  //         }
-  //         else{
-  //             this.veloLibresLayerGroup.clearLayers()
-  //             this.launchPreviewSlider()
-  //         }
-  //     },
-  //     loadGaresIdf(_e){
-  //         const redIcon = new Leaflet.Icon({
-  //             iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
-  //             shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-  //             iconSize: [25, 41],
-  //             iconAnchor: [12, 41],
-  //             popupAnchor: [1, -34],
-  //             shadowSize: [41, 41]
-  //         });
-  //         if (_e.target.checked) {
-  //             let newArray = this.garesIdfPlaces.filter(_place => {
-  //                 return (
-  //                     _place.geometry 
-  //                     && (_place.geometry.coordinates[1] < this.startingPointGeometry.lat + 0.01 
-  //                     && _place.geometry.coordinates[1] > this.startingPointGeometry.lat - 0.01
-  //                     && _place.geometry.coordinates[0] > this.startingPointGeometry.long - 0.01
-  //                     && _place.geometry.coordinates[0] < this.startingPointGeometry.long + 0.01)
-  //                     || ( _place.geometry.coordinates[1] < this.endPointGeometry.lat + 0.01 
-  //                     && _place.geometry.coordinates[1] > this.endPointGeometry.lat - 0.01
-  //                     && _place.geometry.coordinates[0] > this.endPointGeometry.long - 0.01
-  //                     && _place.geometry.coordinates[0] < this.endPointGeometry.long + 0.01)
-  //                 )
-  //             });
-  //             for (const _place of newArray) {
-  //                 let marker = Leaflet.marker([_place.geometry.coordinates[1], _place.geometry.coordinates[0]], {icon: redIcon}).addTo(this.garesIdfLayerGroup)
-  //                 marker.bindPopup(`<strong>${_place.fields.nom_gare}</strong><br>${_place.fields.mode}<br>Ligne : ${_place.fields.ligne}`)
-  //             }
-  //             window.clearInterval(this.displayedInterval)
-  //             this.displayedPost = this.allPosts.filter(post => post.transport_type === 'transports-en-commun')[0]
-  //         }
-  //         else{
-  //             this.garesIdfLayerGroup.clearLayers()
-  //             this.launchPreviewSlider()
-  //         }
-  //     },
-  //     loadParkingVelo(_e){
-  //         const blueIcon = new Leaflet.Icon({
-  //             iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
-  //             shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-  //             iconSize: [25, 41],
-  //             iconAnchor: [12, 41],
-  //             popupAnchor: [1, -34],
-  //             shadowSize: [41, 41]
-  //         });
-  //         if (_e.target.checked) {
-  //             let newArray = this.parkingVeloPlaces.filter(_place => {
-  //                 return (
-  //                     _place.geometry 
-  //                     && ((_place.geometry.coordinates[1] < this.startingPointGeometry.lat + 0.01 
-  //                     && _place.geometry.coordinates[1] > this.startingPointGeometry.lat - 0.01
-  //                     && _place.geometry.coordinates[0] > this.startingPointGeometry.long - 0.01
-  //                     && _place.geometry.coordinates[0] < this.startingPointGeometry.long + 0.01)
-  //                     || ( _place.geometry.coordinates[1] < this.endPointGeometry.lat + 0.01 
-  //                     && _place.geometry.coordinates[1] > this.endPointGeometry.lat - 0.01
-  //                     && _place.geometry.coordinates[0] > this.endPointGeometry.long - 0.01
-  //                     && _place.geometry.coordinates[0] < this.endPointGeometry.long + 0.01))
-  //                 )
-  //             });
-  //             for (const _place of newArray) {
-  //                 let marker = Leaflet.marker([_place.geometry.coordinates[1], _place.geometry.coordinates[0]], {icon: blueIcon}).addTo(this.parkingVeloLayerGroup)
-  //                 marker.bindPopup(`<strong>Couvert : </strong>${_place.fields.couvert}<br><strong>Payant : </strong>${_place.fields.payant}`)
-  //             }
-  //             window.clearInterval(this.displayedInterval)
-  //             this.displayedPost = this.allPosts.filter(post => post.transport_type === 'velo')[0]
-  //         }
-  //         else{
-  //             this.parkingVeloLayerGroup.clearLayers()
-  //             this.launchPreviewSlider()
-  //         }
-  //     },
-  //     loadCovoit(_e){
-  //         const greenIcon = new Leaflet.Icon({
-  //             iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
-  //             shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-  //             iconSize: [25, 41],
-  //             iconAnchor: [12, 41],
-  //             popupAnchor: [1, -34],
-  //             shadowSize: [41, 41]
-  //         });
-  //         if (_e.target.checked) {
-  //             let newArray = this.covoitPlaces.filter(_place => {
-  //                 if(_place){
-  //                     return (
-  //                         (_place['Latitude'] < this.startingPointGeometry.lat + 0.1 
-  //                         && _place['Latitude'] > this.startingPointGeometry.lat - 0.1
-  //                         && _place['Longitude'] > this.startingPointGeometry.long - 0.1
-  //                         && _place['Longitude'] < this.startingPointGeometry.long + 0.1)
-  //                         || (_place['Latitude'] < this.endPointGeometry.lat + 0.1 
-  //                         && _place['Latitude'] > this.endPointGeometry.lat - 0.1
-  //                         && _place['Longitude'] > this.endPointGeometry.long - 0.1
-  //                         && _place['Longitude'] < this.endPointGeometry.long + 0.1)
-  //                     )
-  //                 }
-  //             });
-  //             for (const _place of newArray) {
-  //                 let marker = Leaflet.marker([_place['Latitude'], _place['Longitude']], {icon: greenIcon}).addTo(this.covoitLayerGroup)
-  //                 marker.bindPopup(`<strong>${_place['Ville']}</strong><br>${_place['Nom du lieu']}`)
-  //             }
-  //             window.clearInterval(this.displayedInterval)
-  //             this.displayedPost = this.allPosts.filter(post => post.transport_type === 'covoiturage')[0]
-  //         }
-  //         else{
-  //             this.covoitLayerGroup.clearLayers()
-  //             this.launchPreviewSlider()
-  //         }
-  //     },
-  //     loadElec(_e){
-  //         const blueIcon = new Leaflet.Icon({
-  //             iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
-  //             shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-  //             iconSize: [25, 41],
-  //             iconAnchor: [12, 41],
-  //             popupAnchor: [1, -34],
-  //             shadowSize: [41, 41]
-  //         });
-  //         if (_e.target.checked) {
-  //             for (const _place of this.elecPlaces) {
-  //                 let marker = Leaflet.marker([_place['Ylatitude'], _place['Xlongitude']], {icon: blueIcon}).addTo(this.elecLayerGroup)
-  //                 marker.bindPopup(`<strong>${_place['n_station']}</strong><br>${_place['n_amenageur']}`)
-  //             }
-  //             window.clearInterval(this.displayedInterval)
-  //             this.displayedPost = this.allPosts.filter(post => post.transport_type === 'voiture-electrique')[0]
-  //         }
-  //         else{
-  //             this.elecLayerGroup.clearLayers()
-  //             this.launchPreviewSlider()
-  //         }
-  //     },
-  //     loadGaresFrance(_e){
-  //         const redIcon = new Leaflet.Icon({
-  //             iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
-  //             shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-  //             iconSize: [25, 41],
-  //             iconAnchor: [12, 41],
-  //             popupAnchor: [1, -34],
-  //             shadowSize: [41, 41]
-  //         });
-  //         if (_e.target.checked) {
-  //             let newArray = this.garesFrancePlaces.filter(_place => {
-  //                 return (
-  //                     _place.geometry 
-  //                     && ((_place.geometry.coordinates[1] < this.startingPointGeometry.lat + 0.1 
-  //                     && _place.geometry.coordinates[1] > this.startingPointGeometry.lat - 0.1
-  //                     && _place.geometry.coordinates[0] > this.startingPointGeometry.long - 0.1
-  //                     && _place.geometry.coordinates[0] < this.startingPointGeometry.long + 0.1)
-  //                     || (_place.geometry.coordinates[1] < this.endPointGeometry.lat + 0.1 
-  //                     && _place.geometry.coordinates[1] > this.endPointGeometry.lat - 0.1
-  //                     && _place.geometry.coordinates[0] > this.endPointGeometry.long - 0.1
-  //                     && _place.geometry.coordinates[0] < this.endPointGeometry.long + 0.1))
-  //                 )
-  //             });
-  //             for (const _place of newArray) {
-  //                 if (_place.geometry) {
-  //                     let marker = Leaflet.marker([_place.geometry.coordinates[1], _place.geometry.coordinates[0]], {icon: redIcon}).addTo(this.garesFranceLayerGroup)
-  //                     marker.bindPopup(`<strong>${_place.fields.commune}</strong>`)
-  //                 }
-  //             }
-  //             window.clearInterval(this.displayedInterval)
-  //             this.displayedPost = this.allPosts.filter(post => post.transport_type === 'train')[0]
-  //         }
-  //         else{
-  //             this.garesFranceLayerGroup.clearLayers()
-  //             this.launchPreviewSlider()
-  //         }
-  //     },
-  //     changeServiceType(){
-  //         const radios = document.querySelectorAll('input[type="checkbox"]')
-  //         for (const _radio of radios) {
-  //             _radio.checked = false
-  //         }
-  //         this.franceSelected = !this.franceSelected
-  //         this.quotidienSelected = !this.quotidienSelected
-  //         this.parkingVeloLayerGroup.clearLayers()
-  //         this.veloLibresLayerGroup.clearLayers()
-  //         this.garesIdfLayerGroup.clearLayers()
-  //         this.elecLayerGroup.clearLayers()
-  //         this.covoitLayerGroup.clearLayers()
-  //         this.garesFranceLayerGroup.clearLayers()
-  //         window.clearInterval(this.displayedInterval)
-  //         if (this.franceSelected) {
-  //             this.map.setView([47, 3], 5.5)
-  //             this.displayedPost = this.allPosts.filter(_post => (_post.transport_type === 'voiture-electrique' || _post.transport_type == 'train' || _post.transport_type == 'covoiturage'))[0]
-  //             this.launchPreviewSlider()
-  //         }
-  //         if (this.quotidienSelected) {
-  //             this.displayedPost = this.allPosts.filter(_post => (_post.transport_type === 'velo'|| _post.transport_type === 'transports-en-commun'))[0]
-  //             this.launchPreviewSlider()
-  //             this.map.setView([48.85319519851149, 2.3305100714906075], 10)
-  //         }
-  //     },
-  //     launchPreviewSlider(){
-  //         if (this.quotidienSelected) {
-  //             this.displayedInterval = window.setInterval(() => {
-  //                 const potentialPosts = this.allPosts.filter(_post => (_post != this.displayedPost && (_post.transport_type === 'velo' || _post.transport_type == 'transports-en-commun')))
-  //                 if (potentialPosts.length > 0) {
-  //                     this.displayedPost = potentialPosts[Math.floor(Math.random() * (potentialPosts.length - 1))]
-  //                 }
-  //             }, 10000);
-  //         }
-  //         else if(this.franceSelected){
-  //             this.displayedInterval = window.setInterval(() => {
-  //                 const potentialPosts = this.allPosts.filter(_post => (_post != this.displayedPost && (_post.transport_type === 'voiture-electrique' || _post.transport_type == 'train' || _post.transport_type == 'covoiturage')))
-  //                 if (potentialPosts.length > 0) {
-  //                     this.displayedPost = potentialPosts[Math.floor(Math.random() * (potentialPosts.length - 1))]
-  //                 }
-  //             }, 10000);
-  //         }
-  //     }
-  // },
-  // beforeMount() {
-  //     this.covoitPlaces = JSON.parse(this.covoit)
-  //     this.elecPlaces = JSON.parse(this.elec)
-  //     this.garesFrancePlaces = JSON.parse(this.garesFrance)
-  //     this.veloLibresPlaces = JSON.parse(this.veloLibres)
-  //     this.parkingVeloPlaces = JSON.parse(this.parkingVelo)
-  //     this.garesIdfPlaces = JSON.parse(this.garesIdf)
-  //     this.forwardPosts = JSON.parse(this.forwardPostsString)
-  //     this.allPosts = JSON.parse(this.allPostsString)
-  //     this.displayedPost = this.allPosts.filter(_post => (_post.transport_type === 'velo'|| _post.transport_type === 'transports-en-commun'))[0]
-  //     },
-  // mounted() {
-  //     this.mapInit()
-  //     this.autocomplete()
-  //     this.launchPreviewSlider()
-  // }
+  },
+  methods: {
+    autocomplete: function autocomplete() {
+      var _this = this;
 
+      var options = {
+        componentRestrictions: {
+          country: 'fr'
+        }
+      };
+      var flagStart = new _leaflet.default.Icon({
+        iconUrl: "".concat(this.baseURL, "/flag-start.png"),
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [46, 46],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      });
+      var flagEnd = new _leaflet.default.Icon({
+        iconUrl: "".concat(this.baseURL, "/flag-end.png"),
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [46, 46],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      });
+      var autocompleteStart = new google.maps.places.Autocomplete(this.$refs.autocompleteStart, options);
+      autocompleteStart.setFields(['address_components', 'geometry', 'icon', 'name']);
+      autocompleteStart.addListener('place_changed', function () {
+        var place = autocompleteStart.getPlace();
+        _this.startingPointGeometry.lat = place.geometry.location.lat();
+        _this.startingPointGeometry.long = place.geometry.location.lng();
+
+        _this.startingPointLayerGroup.clearLayers();
+
+        _leaflet.default.marker([_this.startingPointGeometry.lat, _this.startingPointGeometry.long], {
+          icon: flagStart,
+          zIndexOffset: 101
+        }).addTo(_this.startingPointLayerGroup);
+      });
+      var autocompleteEnd = new google.maps.places.Autocomplete(this.$refs.autocompleteEnd, options);
+      autocompleteEnd.setFields(['address_components', 'geometry', 'icon', 'name']);
+      autocompleteEnd.addListener('place_changed', function () {
+        var place = autocompleteEnd.getPlace();
+        _this.endPointGeometry.lat = place.geometry.location.lat();
+        _this.endPointGeometry.long = place.geometry.location.lng();
+
+        _this.endPointLayerGroup.clearLayers();
+
+        _leaflet.default.marker([_this.endPointGeometry.lat, _this.endPointGeometry.long], {
+          icon: flagEnd,
+          zIndexOffset: 100
+        }).addTo(_this.endPointLayerGroup);
+      });
+    },
+    getRandom: function getRandom(arr, n) {
+      var result = new Array(n);
+      var len = arr.length;
+      var taken = new Array(len);
+      if (n > len) throw new RangeError("getRandom: more elements taken than available");
+
+      while (n--) {
+        var x = Math.floor(Math.random() * len);
+        result[n] = arr[x in taken ? taken[x] : x];
+        taken[x] = --len in taken ? taken[len] : len;
+      }
+
+      return result;
+    },
+    mapInit: function mapInit() {
+      this.map = _leaflet.default.map('map').setView([48.85319519851149, 2.3305100714906075], 10);
+
+      _leaflet.default.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://maps.google.com/">Google</a>',
+        maxZoom: 20,
+        subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+      }).addTo(this.map);
+
+      this.covoitLayerGroup = _leaflet.default.layerGroup().addTo(this.map);
+      this.elecLayerGroup = _leaflet.default.layerGroup().addTo(this.map);
+      this.garesFranceLayerGroup = _leaflet.default.layerGroup().addTo(this.map);
+      this.veloLibresLayerGroup = _leaflet.default.layerGroup().addTo(this.map);
+      this.parkingVeloLayerGroup = _leaflet.default.layerGroup().addTo(this.map);
+      this.garesIdfLayerGroup = _leaflet.default.layerGroup().addTo(this.map);
+      this.startingPointLayerGroup = _leaflet.default.layerGroup().addTo(this.map);
+      this.endPointLayerGroup = _leaflet.default.layerGroup().addTo(this.map);
+    },
+    loadVeloLibres: function loadVeloLibres(_e) {
+      var greenIcon = new _leaflet.default.Icon({
+        iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      });
+
+      if (_e.target.checked) {
+        var _iteratorNormalCompletion = true;
+        var _didIteratorError = false;
+        var _iteratorError = undefined;
+
+        try {
+          for (var _iterator = this.veloLibresPlaces[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+            var _place = _step.value;
+
+            var marker = _leaflet.default.marker([_place.geometry.coordinates[1], _place.geometry.coordinates[0]], {
+              icon: greenIcon
+            }).addTo(this.veloLibresLayerGroup);
+
+            marker.bindPopup("<strong>".concat(_place.fields.name, "</strong>"));
+          }
+        } catch (err) {
+          _didIteratorError = true;
+          _iteratorError = err;
+        } finally {
+          try {
+            if (!_iteratorNormalCompletion && _iterator.return != null) {
+              _iterator.return();
+            }
+          } finally {
+            if (_didIteratorError) {
+              throw _iteratorError;
+            }
+          }
+        }
+
+        window.clearInterval(this.displayedInterval);
+        this.displayedPost = this.allPosts.filter(function (post) {
+          return post.transport_type === 'velo';
+        })[0];
+      } else {
+        this.veloLibresLayerGroup.clearLayers();
+        this.launchPreviewSlider();
+      }
+    },
+    loadGaresIdf: function loadGaresIdf(_e) {
+      var _this2 = this;
+
+      var redIcon = new _leaflet.default.Icon({
+        iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      });
+
+      if (_e.target.checked) {
+        var newArray = this.garesIdfPlaces.filter(function (_place) {
+          return _place.geometry && _place.geometry.coordinates[1] < _this2.startingPointGeometry.lat + 0.01 && _place.geometry.coordinates[1] > _this2.startingPointGeometry.lat - 0.01 && _place.geometry.coordinates[0] > _this2.startingPointGeometry.long - 0.01 && _place.geometry.coordinates[0] < _this2.startingPointGeometry.long + 0.01 || _place.geometry.coordinates[1] < _this2.endPointGeometry.lat + 0.01 && _place.geometry.coordinates[1] > _this2.endPointGeometry.lat - 0.01 && _place.geometry.coordinates[0] > _this2.endPointGeometry.long - 0.01 && _place.geometry.coordinates[0] < _this2.endPointGeometry.long + 0.01;
+        });
+        var _iteratorNormalCompletion2 = true;
+        var _didIteratorError2 = false;
+        var _iteratorError2 = undefined;
+
+        try {
+          for (var _iterator2 = newArray[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+            var _place = _step2.value;
+
+            var marker = _leaflet.default.marker([_place.geometry.coordinates[1], _place.geometry.coordinates[0]], {
+              icon: redIcon
+            }).addTo(this.garesIdfLayerGroup);
+
+            marker.bindPopup("<strong>".concat(_place.fields.nom_gare, "</strong><br>").concat(_place.fields.mode, "<br>Ligne : ").concat(_place.fields.ligne));
+          }
+        } catch (err) {
+          _didIteratorError2 = true;
+          _iteratorError2 = err;
+        } finally {
+          try {
+            if (!_iteratorNormalCompletion2 && _iterator2.return != null) {
+              _iterator2.return();
+            }
+          } finally {
+            if (_didIteratorError2) {
+              throw _iteratorError2;
+            }
+          }
+        }
+
+        window.clearInterval(this.displayedInterval);
+        this.displayedPost = this.allPosts.filter(function (post) {
+          return post.transport_type === 'transports-en-commun';
+        })[0];
+      } else {
+        this.garesIdfLayerGroup.clearLayers();
+        this.launchPreviewSlider();
+      }
+    },
+    loadParkingVelo: function loadParkingVelo(_e) {
+      var _this3 = this;
+
+      var blueIcon = new _leaflet.default.Icon({
+        iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      });
+
+      if (_e.target.checked) {
+        var newArray = this.parkingVeloPlaces.filter(function (_place) {
+          return _place.geometry && (_place.geometry.coordinates[1] < _this3.startingPointGeometry.lat + 0.01 && _place.geometry.coordinates[1] > _this3.startingPointGeometry.lat - 0.01 && _place.geometry.coordinates[0] > _this3.startingPointGeometry.long - 0.01 && _place.geometry.coordinates[0] < _this3.startingPointGeometry.long + 0.01 || _place.geometry.coordinates[1] < _this3.endPointGeometry.lat + 0.01 && _place.geometry.coordinates[1] > _this3.endPointGeometry.lat - 0.01 && _place.geometry.coordinates[0] > _this3.endPointGeometry.long - 0.01 && _place.geometry.coordinates[0] < _this3.endPointGeometry.long + 0.01);
+        });
+        var _iteratorNormalCompletion3 = true;
+        var _didIteratorError3 = false;
+        var _iteratorError3 = undefined;
+
+        try {
+          for (var _iterator3 = newArray[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+            var _place = _step3.value;
+
+            var marker = _leaflet.default.marker([_place.geometry.coordinates[1], _place.geometry.coordinates[0]], {
+              icon: blueIcon
+            }).addTo(this.parkingVeloLayerGroup);
+
+            marker.bindPopup("<strong>Couvert : </strong>".concat(_place.fields.couvert, "<br><strong>Payant : </strong>").concat(_place.fields.payant));
+          }
+        } catch (err) {
+          _didIteratorError3 = true;
+          _iteratorError3 = err;
+        } finally {
+          try {
+            if (!_iteratorNormalCompletion3 && _iterator3.return != null) {
+              _iterator3.return();
+            }
+          } finally {
+            if (_didIteratorError3) {
+              throw _iteratorError3;
+            }
+          }
+        }
+
+        window.clearInterval(this.displayedInterval);
+        this.displayedPost = this.allPosts.filter(function (post) {
+          return post.transport_type === 'velo';
+        })[0];
+      } else {
+        this.parkingVeloLayerGroup.clearLayers();
+        this.launchPreviewSlider();
+      }
+    },
+    loadCovoit: function loadCovoit(_e) {
+      var _this4 = this;
+
+      var greenIcon = new _leaflet.default.Icon({
+        iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      });
+
+      if (_e.target.checked) {
+        var newArray = this.covoitPlaces.filter(function (_place) {
+          if (_place) {
+            return _place['Latitude'] < _this4.startingPointGeometry.lat + 0.1 && _place['Latitude'] > _this4.startingPointGeometry.lat - 0.1 && _place['Longitude'] > _this4.startingPointGeometry.long - 0.1 && _place['Longitude'] < _this4.startingPointGeometry.long + 0.1 || _place['Latitude'] < _this4.endPointGeometry.lat + 0.1 && _place['Latitude'] > _this4.endPointGeometry.lat - 0.1 && _place['Longitude'] > _this4.endPointGeometry.long - 0.1 && _place['Longitude'] < _this4.endPointGeometry.long + 0.1;
+          }
+        });
+        var _iteratorNormalCompletion4 = true;
+        var _didIteratorError4 = false;
+        var _iteratorError4 = undefined;
+
+        try {
+          for (var _iterator4 = newArray[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+            var _place = _step4.value;
+
+            var marker = _leaflet.default.marker([_place['Latitude'], _place['Longitude']], {
+              icon: greenIcon
+            }).addTo(this.covoitLayerGroup);
+
+            marker.bindPopup("<strong>".concat(_place['Ville'], "</strong><br>").concat(_place['Nom du lieu']));
+          }
+        } catch (err) {
+          _didIteratorError4 = true;
+          _iteratorError4 = err;
+        } finally {
+          try {
+            if (!_iteratorNormalCompletion4 && _iterator4.return != null) {
+              _iterator4.return();
+            }
+          } finally {
+            if (_didIteratorError4) {
+              throw _iteratorError4;
+            }
+          }
+        }
+
+        window.clearInterval(this.displayedInterval);
+        this.displayedPost = this.allPosts.filter(function (post) {
+          return post.transport_type === 'covoiturage';
+        })[0];
+      } else {
+        this.covoitLayerGroup.clearLayers();
+        this.launchPreviewSlider();
+      }
+    },
+    loadElec: function loadElec(_e) {
+      var blueIcon = new _leaflet.default.Icon({
+        iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      });
+
+      if (_e.target.checked) {
+        var _iteratorNormalCompletion5 = true;
+        var _didIteratorError5 = false;
+        var _iteratorError5 = undefined;
+
+        try {
+          for (var _iterator5 = this.elecPlaces[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+            var _place = _step5.value;
+
+            var marker = _leaflet.default.marker([_place['Ylatitude'], _place['Xlongitude']], {
+              icon: blueIcon
+            }).addTo(this.elecLayerGroup);
+
+            marker.bindPopup("<strong>".concat(_place['n_station'], "</strong><br>").concat(_place['n_amenageur']));
+          }
+        } catch (err) {
+          _didIteratorError5 = true;
+          _iteratorError5 = err;
+        } finally {
+          try {
+            if (!_iteratorNormalCompletion5 && _iterator5.return != null) {
+              _iterator5.return();
+            }
+          } finally {
+            if (_didIteratorError5) {
+              throw _iteratorError5;
+            }
+          }
+        }
+
+        window.clearInterval(this.displayedInterval);
+        this.displayedPost = this.allPosts.filter(function (post) {
+          return post.transport_type === 'voiture-electrique';
+        })[0];
+      } else {
+        this.elecLayerGroup.clearLayers();
+        this.launchPreviewSlider();
+      }
+    },
+    loadGaresFrance: function loadGaresFrance(_e) {
+      var _this5 = this;
+
+      var redIcon = new _leaflet.default.Icon({
+        iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      });
+
+      if (_e.target.checked) {
+        var newArray = this.garesFrancePlaces.filter(function (_place) {
+          return _place.geometry && (_place.geometry.coordinates[1] < _this5.startingPointGeometry.lat + 0.1 && _place.geometry.coordinates[1] > _this5.startingPointGeometry.lat - 0.1 && _place.geometry.coordinates[0] > _this5.startingPointGeometry.long - 0.1 && _place.geometry.coordinates[0] < _this5.startingPointGeometry.long + 0.1 || _place.geometry.coordinates[1] < _this5.endPointGeometry.lat + 0.1 && _place.geometry.coordinates[1] > _this5.endPointGeometry.lat - 0.1 && _place.geometry.coordinates[0] > _this5.endPointGeometry.long - 0.1 && _place.geometry.coordinates[0] < _this5.endPointGeometry.long + 0.1);
+        });
+        var _iteratorNormalCompletion6 = true;
+        var _didIteratorError6 = false;
+        var _iteratorError6 = undefined;
+
+        try {
+          for (var _iterator6 = newArray[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
+            var _place = _step6.value;
+
+            if (_place.geometry) {
+              var marker = _leaflet.default.marker([_place.geometry.coordinates[1], _place.geometry.coordinates[0]], {
+                icon: redIcon
+              }).addTo(this.garesFranceLayerGroup);
+
+              marker.bindPopup("<strong>".concat(_place.fields.commune, "</strong>"));
+            }
+          }
+        } catch (err) {
+          _didIteratorError6 = true;
+          _iteratorError6 = err;
+        } finally {
+          try {
+            if (!_iteratorNormalCompletion6 && _iterator6.return != null) {
+              _iterator6.return();
+            }
+          } finally {
+            if (_didIteratorError6) {
+              throw _iteratorError6;
+            }
+          }
+        }
+
+        window.clearInterval(this.displayedInterval);
+        this.displayedPost = this.allPosts.filter(function (post) {
+          return post.transport_type === 'train';
+        })[0];
+      } else {
+        this.garesFranceLayerGroup.clearLayers();
+        this.launchPreviewSlider();
+      }
+    },
+    changeServiceType: function changeServiceType() {
+      var radios = document.querySelectorAll('input[type="checkbox"]');
+      var _iteratorNormalCompletion7 = true;
+      var _didIteratorError7 = false;
+      var _iteratorError7 = undefined;
+
+      try {
+        for (var _iterator7 = radios[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
+          var _radio = _step7.value;
+          _radio.checked = false;
+        }
+      } catch (err) {
+        _didIteratorError7 = true;
+        _iteratorError7 = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion7 && _iterator7.return != null) {
+            _iterator7.return();
+          }
+        } finally {
+          if (_didIteratorError7) {
+            throw _iteratorError7;
+          }
+        }
+      }
+
+      this.franceSelected = !this.franceSelected;
+      this.quotidienSelected = !this.quotidienSelected;
+      this.parkingVeloLayerGroup.clearLayers();
+      this.veloLibresLayerGroup.clearLayers();
+      this.garesIdfLayerGroup.clearLayers();
+      this.elecLayerGroup.clearLayers();
+      this.covoitLayerGroup.clearLayers();
+      this.garesFranceLayerGroup.clearLayers();
+      window.clearInterval(this.displayedInterval);
+
+      if (this.franceSelected) {
+        this.map.setView([47, 3], 5.5);
+        this.displayedPost = this.allPosts.filter(function (_post) {
+          return _post.transport_type === 'voiture-electrique' || _post.transport_type == 'train' || _post.transport_type == 'covoiturage';
+        })[0];
+        this.launchPreviewSlider();
+      }
+
+      if (this.quotidienSelected) {
+        this.displayedPost = this.allPosts.filter(function (_post) {
+          return _post.transport_type === 'velo' || _post.transport_type === 'transports-en-commun';
+        })[0];
+        this.launchPreviewSlider();
+        this.map.setView([48.85319519851149, 2.3305100714906075], 10);
+      }
+    },
+    launchPreviewSlider: function launchPreviewSlider() {
+      var _this6 = this;
+
+      if (this.quotidienSelected) {
+        this.displayedInterval = window.setInterval(function () {
+          var potentialPosts = _this6.allPosts.filter(function (_post) {
+            return _post != _this6.displayedPost && (_post.transport_type === 'velo' || _post.transport_type == 'transports-en-commun');
+          });
+
+          if (potentialPosts.length > 0) {
+            _this6.displayedPost = potentialPosts[Math.floor(Math.random() * (potentialPosts.length - 1))];
+          }
+        }, 10000);
+      } else if (this.franceSelected) {
+        this.displayedInterval = window.setInterval(function () {
+          var potentialPosts = _this6.allPosts.filter(function (_post) {
+            return _post != _this6.displayedPost && (_post.transport_type === 'voiture-electrique' || _post.transport_type == 'train' || _post.transport_type == 'covoiturage');
+          });
+
+          if (potentialPosts.length > 0) {
+            _this6.displayedPost = potentialPosts[Math.floor(Math.random() * (potentialPosts.length - 1))];
+          }
+        }, 10000);
+      }
+    }
+  },
+  beforeMount: function beforeMount() {
+    this.covoitPlaces = JSON.parse(this.covoit);
+    this.elecPlaces = JSON.parse(this.elec);
+    this.garesFrancePlaces = JSON.parse(this.garesFrance);
+    this.veloLibresPlaces = JSON.parse(this.veloLibres);
+    this.parkingVeloPlaces = JSON.parse(this.parkingVelo);
+    this.garesIdfPlaces = JSON.parse(this.garesIdf);
+    this.forwardPosts = JSON.parse(this.forwardPostsString);
+    this.allPosts = JSON.parse(this.allPostsString);
+    this.displayedPost = this.allPosts.filter(function (_post) {
+      return _post.transport_type === 'velo' || _post.transport_type === 'transports-en-commun';
+    })[0];
+  },
+  mounted: function mounted() {
+    this.mapInit();
+    this.autocomplete();
+    this.launchPreviewSlider();
+  }
 };
 exports.default = _default;
         var $cf6cb4 = exports.default || module.exports;
