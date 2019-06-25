@@ -1,4 +1,4 @@
-window.baseURL = 'http://localhost/data-journalism/wp-content/themes/team2/public'
+window.baseURL = 'http://data-journalism.alphonsebouy.fr/wp-content/themes/team2/public'
 
 import './config.css'
 
