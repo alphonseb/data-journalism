@@ -1,0 +1,43 @@
+{
+    "key": "group_5d12263d91f21",
+    "title": "Article - Global",
+    "fields": [
+        {
+            "key": "field_5d12264529c57",
+            "label": "Accroche",
+            "name": "incent",
+            "type": "text",
+            "instructions": "2 phrases max. pour présenter l'article sur la page d'accueil",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1561477579
+}
