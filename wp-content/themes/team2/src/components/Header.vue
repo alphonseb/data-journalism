@@ -40,6 +40,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 3rem;
     .logo{
         display: flex;
         align-items: center;

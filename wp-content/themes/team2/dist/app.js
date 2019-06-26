@@ -26619,8 +26619,23 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
 var _default = {
-  name: 'Footer'
+  name: 'Footer',
+  props: {
+    footerMenu: String
+  },
+  data: function data() {
+    return {
+      menu: null
+    };
+  },
+  beforeMount: function beforeMount() {
+    this.menu = JSON.parse(this.footerMenu);
+  }
 };
 exports.default = _default;
         var $42fab8 = exports.default || module.exports;
@@ -26692,7 +26707,19 @@ exports.default = _default;
           ])
         ]),
         _vm._v(" "),
-        _c("nav")
+        _c("nav", [
+          _c(
+            "ul",
+            _vm._l(_vm.menu, function(_menuItem) {
+              return _c("li", { key: _menuItem.id }, [
+                _c("a", { attrs: { href: _menuItem.url } }, [
+                  _vm._v(_vm._s(_menuItem.title))
+                ])
+              ])
+            }),
+            0
+          )
+        ])
       ])
     ])
   ])
@@ -26912,7 +26939,8 @@ var _default = {
     parkingVelo: String,
     garesIdf: String,
     forwardPostsString: String,
-    allPostsString: String
+    allPostsString: String,
+    footerMenu: String
   },
   methods: {
     replaceQuote: function replaceQuote(_string) {
@@ -27807,7 +27835,7 @@ exports.default = _default;
         1
       ),
       _vm._v(" "),
-      _c("Footer")
+      _c("Footer", { attrs: { "footer-menu": _vm.footerMenu } })
     ],
     1
   )
@@ -27938,6 +27966,17 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+
+var _Header = _interopRequireDefault(require("./Header"));
+
+var _Footer = _interopRequireDefault(require("./Footer"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
 //
 //
 //
@@ -27965,7 +28004,12 @@ var _default = {
     excerpt: String,
     thumbnail_url: String,
     vignettes_string: String,
-    homeUrl: String
+    homeUrl: String,
+    footerMenu: String
+  },
+  components: {
+    Header: _Header.default,
+    Footer: _Footer.default
   },
   data: function data() {
     return {
@@ -27992,51 +28036,70 @@ exports.default = _default;
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "single" }, [
-    _c("a", { staticClass: "home-link", attrs: { href: _vm.homeUrl } }, [
-      _vm._v("Revenir à l'accueil")
-    ]),
-    _vm._v(" "),
-    _c("h1", [_vm._v(_vm._s(_vm.title))]),
-    _vm._v(" "),
-    _c("p", [_vm._v("\n        " + _vm._s(_vm.excerpt) + "\n    ")]),
-    _vm._v(" "),
-    _c("img", { attrs: { src: _vm.thumbnail_url, alt: "" } }),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "vignettes-container" },
-      _vm._l(_vm.vignettes, function(_vignette) {
-        return _c(
-          "div",
-          {
-            key: _vignette.id,
-            staticClass: "vignette-single",
-            class: _vignette.type
-          },
-          [
-            _c("div", { staticClass: "front" }, [
-              _vignette.type === "number" || _vignette.type === "word"
-                ? _c("p", [_vm._v(_vm._s(_vignette.front))])
-                : _vm._e(),
-              _vm._v(" "),
-              _vignette.type === "graph_large" ||
-              _vignette.type === "graph_small" ||
-              _vignette.type === "photo"
-                ? _c("img", { attrs: { src: _vignette.front["url"], alt: "" } })
-                : _vm._e()
-            ]),
-            _vm._v(" "),
-            _c("div", {
-              staticClass: "back",
-              domProps: { innerHTML: _vm._s(_vignette.back) }
-            })
-          ]
-        )
-      }),
-      0
-    )
-  ])
+  return _c(
+    "div",
+    [
+      _c(
+        "div",
+        { staticClass: "single" },
+        [
+          _c("Header", { attrs: { "home-url": _vm.homeUrl } }),
+          _vm._v(" "),
+          _c("a", { staticClass: "home-link", attrs: { href: _vm.homeUrl } }, [
+            _vm._v("Revenir à l'accueil")
+          ]),
+          _vm._v(" "),
+          _c("h1", [_vm._v(_vm._s(_vm.title))]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v("\r\n            " + _vm._s(_vm.excerpt) + "\r\n        ")
+          ]),
+          _vm._v(" "),
+          _c("img", { attrs: { src: _vm.thumbnail_url, alt: "" } }),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "vignettes-container" },
+            _vm._l(_vm.vignettes, function(_vignette) {
+              return _c(
+                "div",
+                {
+                  key: _vignette.id,
+                  staticClass: "vignette-single",
+                  class: _vignette.type
+                },
+                [
+                  _c("div", { staticClass: "front" }, [
+                    _vignette.type === "number" || _vignette.type === "word"
+                      ? _c("p", [_vm._v(_vm._s(_vignette.front))])
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vignette.type === "graph_large" ||
+                    _vignette.type === "graph_small" ||
+                    _vignette.type === "photo"
+                      ? _c("img", {
+                          attrs: { src: _vignette.front["url"], alt: "" }
+                        })
+                      : _vm._e()
+                  ]),
+                  _vm._v(" "),
+                  _c("div", {
+                    staticClass: "back",
+                    domProps: { innerHTML: _vm._s(_vignette.back) }
+                  })
+                ]
+              )
+            }),
+            0
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c("Footer", { attrs: { "footer-menu": _vm.footerMenu } })
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -28071,7 +28134,7 @@ render._withStripped = true
       
       }
     })();
-},{"./..\\imgs\\arrow-white.png":[["arrow-white.f4eab611.png","imgs/arrow-white.png"],"imgs/arrow-white.png"],"_css_loader":"../../../../../../../Users/Alphonse/AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"app.js":[function(require,module,exports) {
+},{"./Header":"components/Header.vue","./Footer":"components/Footer.vue","./..\\imgs\\arrow-white.png":[["arrow-white.f4eab611.png","imgs/arrow-white.png"],"imgs/arrow-white.png"],"_css_loader":"../../../../../../../Users/Alphonse/AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"app.js":[function(require,module,exports) {
 "use strict";
 
 require("./config.css");

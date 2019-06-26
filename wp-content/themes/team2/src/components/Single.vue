@@ -1,5 +1,7 @@
 <template>
+<div>
     <div class="single">
+        <Header :home-url="homeUrl"></Header>
         <a class="home-link" :href="homeUrl">Revenir à l'accueil</a>
         <h1>{{ title }}</h1>
         <p>
@@ -16,9 +18,14 @@
             </div>
         </div>
     </div>
+    <Footer :footer-menu="footerMenu"></Footer>
+</div>
 </template>
 
 <script>
+import Header from './Header'
+import Footer from './Footer'
+
 export default {
     name: 'Single',
     props: {
@@ -26,7 +33,12 @@ export default {
         excerpt: String,
         thumbnail_url: String,
         vignettes_string: String,
-        homeUrl: String
+        homeUrl: String,
+        footerMenu: String
+    },
+    components: {
+        Header,
+        Footer
     },
     data() {
         return {
@@ -47,6 +59,7 @@ export default {
     perspective: 800px;
     max-width: 120rem;
     margin: 0 auto;
+    margin-bottom: 6rem;
 }
 
 .home-link{

@@ -23,7 +23,11 @@
                     </a>
                 </div>
                 <nav>
-                    
+                    <ul>
+                        <li v-for="_menuItem in menu" :key="_menuItem.id">
+                            <a :href="_menuItem.url">{{_menuItem.title}}</a>
+                        </li>
+                    </ul>
                 </nav>
             </div>
         </div>
@@ -32,13 +36,24 @@
 
 <script>
 export default {
-    name: 'Footer'
+    name: 'Footer',
+    props: {
+        footerMenu: String
+    },
+    data() {
+        return {
+            menu: null
+        }
+    },
+    beforeMount() {
+        this.menu = JSON.parse(this.footerMenu)
+    }
 }
 </script>
 
 <style lang="scss" scoped>
 .newsletter{
-    padding: 2rem 0;
+    padding: 1.5rem 0;
     color: white;
     background-color: #ACCEDC;
     .container{
@@ -69,15 +84,19 @@ export default {
         font-size: 1.4rem;
         border-radius: 4px;
         padding: 1rem;
+        cursor: pointer;
     }
 }
 .links{
     background-color: var(--dark-blue);
     color: white;
-    padding: 2rem 0;
+    padding: 3rem 0;
     .container{
         max-width: 120rem;
         margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         .socials{
             display: flex;
             align-items: center;
@@ -86,6 +105,21 @@ export default {
             }
             a{
                 margin-right: 1rem;
+            }
+        }
+        nav{
+            ul{
+                display: flex;
+                li{
+                    list-style: none;
+                    margin-left: 3rem;
+                    a{
+                        color: white;
+                        font-weight: bold;
+                        text-decoration: none;
+                        font-size: 1.5rem;
+                    }
+                }
             }
         }
     }

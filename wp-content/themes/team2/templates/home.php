@@ -65,22 +65,27 @@ foreach (get_field('forward_posts') as $post_key => $post) {
 }
 wp_reset_postdata();
 
-// echo '<pre>';
-// print_r(json_encode($forward_posts));
-// echo '</pre>';
+$footerMenu = [];
+
+foreach (wp_get_nav_menu_items('footer') as $key => $value) {
+    $footerMenu[] = [
+        "title" => $value->title,
+        "url" => $value->url
+    ];
+}
 
 ?>
 <div id="app">
     <Home 
-        gares-idf="<?= htmlspecialchars($garesIDF_json, ENT_QUOTES, 'UTF-8') ?>"
-        parking-velo="<?= htmlspecialchars($parkingVelo_json, ENT_QUOTES, 'UTF-8') ?>"
-        velo-libres="<?= htmlspecialchars($veloLibres_json, ENT_QUOTES, 'UTF-8') ?>"
-        covoit="<?= htmlspecialchars($covoit_json, ENT_QUOTES, 'UTF-8') ?>"
-        elec="<?= htmlspecialchars($elec_json, ENT_QUOTES, 'UTF-8') ?>"
-        gares-france="<?= htmlspecialchars($garesFrance_json, ENT_QUOTES, 'UTF-8') ?>"
-        forward-posts-string="<?= htmlspecialchars(json_encode($forward_posts), ENT_QUOTES, 'UTF-8') ?>"
-        all-posts-string="<?= htmlspecialchars(json_encode($all_posts), ENT_QUOTES, 'UTF-8') ?>"
-        home-url="<?= $home_url ?>"
-    >
+        gares-idf="<?= htmlspecialchars($garesIDF_json, ENT_QUOTES, 'UTF-8') ?>" 
+        parking-velo="<?= htmlspecialchars($parkingVelo_json, ENT_QUOTES, 'UTF-8') ?>" 
+        velo-libres="<?= htmlspecialchars($veloLibres_json, ENT_QUOTES, 'UTF-8') ?>" 
+        covoit="<?= htmlspecialchars($covoit_json, ENT_QUOTES, 'UTF-8') ?>" 
+        elec="<?= htmlspecialchars($elec_json, ENT_QUOTES, 'UTF-8') ?>" 
+        gares-france="<?= htmlspecialchars($garesFrance_json, ENT_QUOTES, 'UTF-8') ?>" 
+        forward-posts-string="<?= htmlspecialchars(json_encode($forward_posts), ENT_QUOTES, 'UTF-8') ?>" 
+        all-posts-string="<?= htmlspecialchars(json_encode($all_posts), ENT_QUOTES, 'UTF-8') ?>" 
+        footer-menu="<?= htmlspecialchars(json_encode($footerMenu), ENT_QUOTES, 'UTF-8') ?>" 
+        home-url="<?= $home_url ?>">
     </Home>
 </div>

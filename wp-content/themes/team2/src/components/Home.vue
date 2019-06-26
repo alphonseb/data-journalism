@@ -90,7 +90,7 @@
             </div>
         </div>
     
-        <Footer></Footer>
+        <Footer :footer-menu="footerMenu"></Footer>
     </div>
 </template>
 
@@ -150,7 +150,8 @@ export default {
         parkingVelo: String,
         garesIdf: String,
         forwardPostsString: String,
-        allPostsString: String
+        allPostsString: String,
+        footerMenu: String
     },
     methods: {
         replaceQuote(_string){

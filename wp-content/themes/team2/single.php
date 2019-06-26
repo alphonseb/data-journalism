@@ -18,6 +18,15 @@
             ];
         }
     }
+    
+    $footerMenu = [];
+
+foreach (wp_get_nav_menu_items('footer') as $key => $value) {
+    $footerMenu[] = [
+        "title" => $value->title,
+        "url" => $value->url
+    ];
+}
 ?>
 
 <?php get_header() ?> 
@@ -28,6 +37,7 @@
     excerpt="<?= $excerpt ?>"
     thumbnail_url="<?= $thumbnail_url ?>"
     vignettes_string="<?= htmlspecialchars(json_encode($vignettes), ENT_QUOTES, 'UTF-8') ?>"
+    footer-menu="<?= htmlspecialchars(json_encode($footerMenu), ENT_QUOTES, 'UTF-8') ?>"
     home-url="<?= $home_url ?>"
     >
     </Single>
