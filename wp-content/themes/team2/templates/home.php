@@ -23,27 +23,28 @@ if ($posts_query->have_posts()) {
     wp_reset_postdata();
 }
 
-function csv_to_json($file)
-{
-    $csv = file_get_contents(THEME_PATH . '/data/' . $file);
-    $csvLines = explode("\n", $csv);
-    $csvLines = array_map("utf8_encode", $csvLines);
-    $indexes = str_getcsv(array_shift($csvLines));
-    $array = array_map(
-        function ($e) use ($indexes) {
-            $csvArray = str_getcsv($e);
-            if (count($csvArray) == count($indexes)) {
-                return array_combine($indexes, $csvArray);
-            }
-        },
-        $csvLines
-    );
-    array_pop($array);
-    return json_encode($array);
-}
+// function csv_to_json($file)
+// {
+//     $csv = file_get_contents(THEME_PATH . '/data/' . $file);
+//     $csvLines = explode("\n", $csv);
+//     $csvLines = array_map("utf8_encode", $csvLines);
+//     $indexes = str_getcsv(array_shift($csvLines));
+//     $array = array_map(
+//         function ($e) use ($indexes) {
+//             $csvArray = str_getcsv($e);
+//             if (count($csvArray) == count($indexes)) {
+//                 return array_combine($indexes, $csvArray);
+//             }
+//         },
+//         $csvLines
+//     );
+//     array_pop($array);
+//     file_put_contents(THEME_PATH . '/data/' . str_replace('.csv','.json',$file), json_encode($array));
+//     return json_encode($array);
+// }
 
-$covoit_json = csv_to_json('covoiturage.csv');
-$elec_json = csv_to_json('electrique.csv');
+$covoit_json = file_get_contents(THEME_PATH . '/data/covoiturage.json');
+$elec_json = file_get_contents(THEME_PATH . '/data/electrique.json');
 $garesFrance_json = file_get_contents(THEME_PATH . '/data/gares-france.json');
 
 $veloLibres_json = file_get_contents(THEME_PATH . '/data/velo-libre-service.json');
@@ -64,6 +65,9 @@ foreach (get_field('forward_posts') as $post_key => $post) {
 }
 wp_reset_postdata();
 
+// echo '<pre>';
+// print_r(json_encode($forward_posts));
+// echo '</pre>';
 
 ?>
 <div id="app">

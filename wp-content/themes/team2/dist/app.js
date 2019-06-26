@@ -26580,6 +26580,176 @@ render._withStripped = true
       
       }
     })();
+},{"_css_loader":"../../../../../../../Users/Alphonse/AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Footer.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  name: 'Footer'
+};
+exports.default = _default;
+        var $42fab8 = exports.default || module.exports;
+      
+      if (typeof $42fab8 === 'function') {
+        $42fab8 = $42fab8.options;
+      }
+    
+        /* template */
+        Object.assign($42fab8, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("footer", [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "links" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "socials" }, [
+          _c("h4", [_vm._v("Suivez nous")]),
+          _vm._v(" "),
+          _c("a", { attrs: { href: "" } }, [
+            _c(
+              "svg",
+              {
+                attrs: {
+                  width: "29",
+                  height: "29",
+                  viewBox: "0 0 29 29",
+                  fill: "none",
+                  xmlns: "http://www.w3.org/2000/svg"
+                }
+              },
+              [
+                _c("path", {
+                  attrs: {
+                    d:
+                      "M21.7488 0.00603394L17.9882 0C13.7633 0 11.033 2.80125 11.033 7.13694V10.4275H7.25184C6.92511 10.4275 6.66052 10.6924 6.66052 11.0192V15.7869C6.66052 16.1136 6.92541 16.3782 7.25184 16.3782H11.033V28.4087C11.033 28.7354 11.2976 29 11.6243 29H16.5576C16.8843 29 17.1489 28.7351 17.1489 28.4087V16.3782H21.5699C21.8967 16.3782 22.1612 16.1136 22.1612 15.7869L22.1631 11.0192C22.1631 10.8623 22.1006 10.712 21.9899 10.601C21.8792 10.49 21.7283 10.4275 21.5714 10.4275H17.1489V7.63806C17.1489 6.29732 17.4684 5.61669 19.2149 5.61669L21.7482 5.61578C22.0747 5.61578 22.3392 5.35089 22.3392 5.02446V0.59736C22.3392 0.271225 22.075 0.00663733 21.7488 0.00603394Z",
+                    fill: "white"
+                  }
+                })
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("a", { attrs: { href: "" } }, [
+            _c(
+              "svg",
+              {
+                attrs: {
+                  width: "29",
+                  height: "29",
+                  viewBox: "0 0 29 29",
+                  fill: "none",
+                  xmlns: "http://www.w3.org/2000/svg"
+                }
+              },
+              [
+                _c("path", {
+                  attrs: {
+                    d:
+                      "M29 5.50894C27.9326 5.9819 26.7873 6.30265 25.584 6.44585C26.8127 5.7101 27.7532 4.54308 28.1989 3.15677C27.0464 3.83813 25.7743 4.33288 24.4188 4.60108C23.3333 3.44312 21.7893 2.72186 20.0768 2.72186C16.7914 2.72186 14.1275 5.38574 14.1275 8.66938C14.1275 9.13508 14.1801 9.58994 14.2816 10.0249C9.338 9.77659 4.9544 7.40811 2.02052 3.80913C1.50767 4.68623 1.21592 5.70825 1.21592 6.79921C1.21592 8.86328 2.26698 10.6845 3.86169 11.75C2.88673 11.7174 1.96977 11.4492 1.16701 11.0034V11.0777C1.16701 13.959 3.21838 16.3638 5.93841 16.9111C5.44006 17.0452 4.91455 17.1195 4.3709 17.1195C3.98674 17.1195 3.61524 17.0814 3.25099 17.0089C4.00844 19.3738 6.20481 21.0935 8.80709 21.1407C6.77202 22.7354 4.206 23.6831 1.41892 23.6831C0.938709 23.6831 0.465706 23.6541 0 23.6016C2.63308 25.2924 5.75906 26.2782 9.11879 26.2782C20.0624 26.2782 26.0444 17.2137 26.0444 9.35258L26.0244 8.58243C27.1932 7.74877 28.2044 6.70136 29 5.50894Z",
+                    fill: "white"
+                  }
+                })
+              ]
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("nav")
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "newsletter" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("h4", [_vm._v("Newsletter")]),
+        _vm._v(" "),
+        _c("input", {
+          attrs: {
+            type: "email",
+            placeholder: "Entrez votre addresse e-mail..."
+          }
+        }),
+        _vm._v(" "),
+        _c("button", [_vm._v("Je m'inscris")])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: "data-v-42fab8",
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$42fab8', $42fab8);
+          } else {
+            api.reload('$42fab8', $42fab8);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
 },{"_css_loader":"../../../../../../../Users/Alphonse/AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Home.vue":[function(require,module,exports) {
 "use strict";
 
@@ -26591,6 +26761,8 @@ exports.default = void 0;
 var _leaflet = _interopRequireDefault(require("leaflet"));
 
 var _Header = _interopRequireDefault(require("./Header"));
+
+var _Footer = _interopRequireDefault(require("./Footer"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26667,10 +26839,34 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   name: 'Home',
   components: {
-    Header: _Header.default
+    Header: _Header.default,
+    Footer: _Footer.default
   },
   data: function data() {
     return {
@@ -26703,7 +26899,8 @@ var _default = {
       forwardPosts: null,
       allPosts: null,
       displayedPost: null,
-      displayedInterval: null
+      displayedInterval: null,
+      autocompleteEndIsDisplayed: false
     };
   },
   props: {
@@ -26718,7 +26915,44 @@ var _default = {
     allPostsString: String
   },
   methods: {
-    autocomplete: function autocomplete() {
+    replaceQuote: function replaceQuote(_string) {
+      return _string.replace('&rsquo;', '\'');
+    },
+    clearAllLayers: function clearAllLayers() {
+      this.parkingVeloLayerGroup.clearLayers();
+      this.veloLibresLayerGroup.clearLayers();
+      this.garesIdfLayerGroup.clearLayers();
+      this.elecLayerGroup.clearLayers();
+      this.covoitLayerGroup.clearLayers();
+      this.garesFranceLayerGroup.clearLayers();
+    },
+    uncheckAll: function uncheckAll() {
+      var radios = document.querySelectorAll('input[type="checkbox"]');
+      var _iteratorNormalCompletion = true;
+      var _didIteratorError = false;
+      var _iteratorError = undefined;
+
+      try {
+        for (var _iterator = radios[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+          var _radio = _step.value;
+          _radio.checked = false;
+        }
+      } catch (err) {
+        _didIteratorError = true;
+        _iteratorError = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion && _iterator.return != null) {
+            _iterator.return();
+          }
+        } finally {
+          if (_didIteratorError) {
+            throw _iteratorError;
+          }
+        }
+      }
+    },
+    autocompleteStart: function autocompleteStart() {
       var _this = this;
 
       var options = {
@@ -26734,17 +26968,13 @@ var _default = {
         popupAnchor: [1, -34],
         shadowSize: [41, 41]
       });
-      var flagEnd = new _leaflet.default.Icon({
-        iconUrl: "".concat(this.baseURL, "/flag-end.png"),
-        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-        iconSize: [46, 46],
-        iconAnchor: [12, 41],
-        popupAnchor: [1, -34],
-        shadowSize: [41, 41]
-      });
       var autocompleteStart = new google.maps.places.Autocomplete(this.$refs.autocompleteStart, options);
       autocompleteStart.setFields(['address_components', 'geometry', 'icon', 'name']);
       autocompleteStart.addListener('place_changed', function () {
+        _this.uncheckAll();
+
+        _this.clearAllLayers();
+
         var place = autocompleteStart.getPlace();
         _this.startingPointGeometry.lat = place.geometry.location.lat();
         _this.startingPointGeometry.long = place.geometry.location.lng();
@@ -26755,20 +26985,49 @@ var _default = {
           icon: flagStart,
           zIndexOffset: 101
         }).addTo(_this.startingPointLayerGroup);
+
+        if (!_this.autocompleteEndIsDisplayed) {
+          window.setTimeout(function () {
+            _this.autocompleteEnd();
+
+            _this.autocompleteEndIsDisplayed = true;
+          }, 500);
+        }
+      });
+    },
+    autocompleteEnd: function autocompleteEnd() {
+      var _this2 = this;
+
+      var options = {
+        componentRestrictions: {
+          country: 'fr'
+        }
+      };
+      var flagEnd = new _leaflet.default.Icon({
+        iconUrl: "".concat(this.baseURL, "/flag-end.png"),
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [46, 46],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
       });
       var autocompleteEnd = new google.maps.places.Autocomplete(this.$refs.autocompleteEnd, options);
       autocompleteEnd.setFields(['address_components', 'geometry', 'icon', 'name']);
       autocompleteEnd.addListener('place_changed', function () {
+        _this2.uncheckAll();
+
+        _this2.clearAllLayers();
+
         var place = autocompleteEnd.getPlace();
-        _this.endPointGeometry.lat = place.geometry.location.lat();
-        _this.endPointGeometry.long = place.geometry.location.lng();
+        _this2.endPointGeometry.lat = place.geometry.location.lat();
+        _this2.endPointGeometry.long = place.geometry.location.lng();
 
-        _this.endPointLayerGroup.clearLayers();
+        _this2.endPointLayerGroup.clearLayers();
 
-        _leaflet.default.marker([_this.endPointGeometry.lat, _this.endPointGeometry.long], {
+        _leaflet.default.marker([_this2.endPointGeometry.lat, _this2.endPointGeometry.long], {
           icon: flagEnd,
           zIndexOffset: 100
-        }).addTo(_this.endPointLayerGroup);
+        }).addTo(_this2.endPointLayerGroup);
       });
     },
     getRandom: function getRandom(arr, n) {
@@ -26789,7 +27048,7 @@ var _default = {
       this.map = _leaflet.default.map('map').setView([48.85319519851149, 2.3305100714906075], 10);
 
       _leaflet.default.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
-        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://maps.google.com/">Google</a>',
+        attribution: 'Map data &copy; <a href="https://www.maps.google.com/">Google</a> and <a href="https://data.gouv.fr">data.gouv.fr</a>, Imagery © <a href="https://maps.google.com/">Google</a>',
         maxZoom: 20,
         subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
       }).addTo(this.map);
@@ -26814,73 +27073,19 @@ var _default = {
       });
 
       if (_e.target.checked) {
-        var _iteratorNormalCompletion = true;
-        var _didIteratorError = false;
-        var _iteratorError = undefined;
+        var _iteratorNormalCompletion2 = true;
+        var _didIteratorError2 = false;
+        var _iteratorError2 = undefined;
 
         try {
-          for (var _iterator = this.veloLibresPlaces[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-            var _place = _step.value;
+          for (var _iterator2 = this.veloLibresPlaces[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+            var _place = _step2.value;
 
             var marker = _leaflet.default.marker([_place.geometry.coordinates[1], _place.geometry.coordinates[0]], {
               icon: greenIcon
             }).addTo(this.veloLibresLayerGroup);
 
             marker.bindPopup("<strong>".concat(_place.fields.name, "</strong>"));
-          }
-        } catch (err) {
-          _didIteratorError = true;
-          _iteratorError = err;
-        } finally {
-          try {
-            if (!_iteratorNormalCompletion && _iterator.return != null) {
-              _iterator.return();
-            }
-          } finally {
-            if (_didIteratorError) {
-              throw _iteratorError;
-            }
-          }
-        }
-
-        window.clearInterval(this.displayedInterval);
-        this.displayedPost = this.allPosts.filter(function (post) {
-          return post.transport_type === 'velo';
-        })[0];
-      } else {
-        this.veloLibresLayerGroup.clearLayers();
-        this.launchPreviewSlider();
-      }
-    },
-    loadGaresIdf: function loadGaresIdf(_e) {
-      var _this2 = this;
-
-      var redIcon = new _leaflet.default.Icon({
-        iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
-        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-        iconSize: [25, 41],
-        iconAnchor: [12, 41],
-        popupAnchor: [1, -34],
-        shadowSize: [41, 41]
-      });
-
-      if (_e.target.checked) {
-        var newArray = this.garesIdfPlaces.filter(function (_place) {
-          return _place.geometry && _place.geometry.coordinates[1] < _this2.startingPointGeometry.lat + 0.01 && _place.geometry.coordinates[1] > _this2.startingPointGeometry.lat - 0.01 && _place.geometry.coordinates[0] > _this2.startingPointGeometry.long - 0.01 && _place.geometry.coordinates[0] < _this2.startingPointGeometry.long + 0.01 || _place.geometry.coordinates[1] < _this2.endPointGeometry.lat + 0.01 && _place.geometry.coordinates[1] > _this2.endPointGeometry.lat - 0.01 && _place.geometry.coordinates[0] > _this2.endPointGeometry.long - 0.01 && _place.geometry.coordinates[0] < _this2.endPointGeometry.long + 0.01;
-        });
-        var _iteratorNormalCompletion2 = true;
-        var _didIteratorError2 = false;
-        var _iteratorError2 = undefined;
-
-        try {
-          for (var _iterator2 = newArray[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-            var _place = _step2.value;
-
-            var marker = _leaflet.default.marker([_place.geometry.coordinates[1], _place.geometry.coordinates[0]], {
-              icon: redIcon
-            }).addTo(this.garesIdfLayerGroup);
-
-            marker.bindPopup("<strong>".concat(_place.fields.nom_gare, "</strong><br>").concat(_place.fields.mode, "<br>Ligne : ").concat(_place.fields.ligne));
           }
         } catch (err) {
           _didIteratorError2 = true;
@@ -26899,18 +27104,18 @@ var _default = {
 
         window.clearInterval(this.displayedInterval);
         this.displayedPost = this.allPosts.filter(function (post) {
-          return post.transport_type === 'transports-en-commun';
+          return post.transport_type === 'velo';
         })[0];
       } else {
-        this.garesIdfLayerGroup.clearLayers();
+        this.veloLibresLayerGroup.clearLayers();
         this.launchPreviewSlider();
       }
     },
-    loadParkingVelo: function loadParkingVelo(_e) {
+    loadGaresIdf: function loadGaresIdf(_e) {
       var _this3 = this;
 
-      var blueIcon = new _leaflet.default.Icon({
-        iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+      var redIcon = new _leaflet.default.Icon({
+        iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
         shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
         iconSize: [25, 41],
         iconAnchor: [12, 41],
@@ -26919,8 +27124,8 @@ var _default = {
       });
 
       if (_e.target.checked) {
-        var newArray = this.parkingVeloPlaces.filter(function (_place) {
-          return _place.geometry && (_place.geometry.coordinates[1] < _this3.startingPointGeometry.lat + 0.01 && _place.geometry.coordinates[1] > _this3.startingPointGeometry.lat - 0.01 && _place.geometry.coordinates[0] > _this3.startingPointGeometry.long - 0.01 && _place.geometry.coordinates[0] < _this3.startingPointGeometry.long + 0.01 || _place.geometry.coordinates[1] < _this3.endPointGeometry.lat + 0.01 && _place.geometry.coordinates[1] > _this3.endPointGeometry.lat - 0.01 && _place.geometry.coordinates[0] > _this3.endPointGeometry.long - 0.01 && _place.geometry.coordinates[0] < _this3.endPointGeometry.long + 0.01);
+        var newArray = this.garesIdfPlaces.filter(function (_place) {
+          return _place.geometry && _place.geometry.coordinates[1] < _this3.startingPointGeometry.lat + 0.01 && _place.geometry.coordinates[1] > _this3.startingPointGeometry.lat - 0.01 && _place.geometry.coordinates[0] > _this3.startingPointGeometry.long - 0.01 && _place.geometry.coordinates[0] < _this3.startingPointGeometry.long + 0.01 || _place.geometry.coordinates[1] < _this3.endPointGeometry.lat + 0.01 && _place.geometry.coordinates[1] > _this3.endPointGeometry.lat - 0.01 && _place.geometry.coordinates[0] > _this3.endPointGeometry.long - 0.01 && _place.geometry.coordinates[0] < _this3.endPointGeometry.long + 0.01;
         });
         var _iteratorNormalCompletion3 = true;
         var _didIteratorError3 = false;
@@ -26931,10 +27136,10 @@ var _default = {
             var _place = _step3.value;
 
             var marker = _leaflet.default.marker([_place.geometry.coordinates[1], _place.geometry.coordinates[0]], {
-              icon: blueIcon
-            }).addTo(this.parkingVeloLayerGroup);
+              icon: redIcon
+            }).addTo(this.garesIdfLayerGroup);
 
-            marker.bindPopup("<strong>Couvert : </strong>".concat(_place.fields.couvert, "<br><strong>Payant : </strong>").concat(_place.fields.payant));
+            marker.bindPopup("<strong>".concat(_place.fields.nom_gare, "</strong><br>").concat(_place.fields.mode, "<br>Ligne : ").concat(_place.fields.ligne));
           }
         } catch (err) {
           _didIteratorError3 = true;
@@ -26953,18 +27158,18 @@ var _default = {
 
         window.clearInterval(this.displayedInterval);
         this.displayedPost = this.allPosts.filter(function (post) {
-          return post.transport_type === 'velo';
+          return post.transport_type === 'transports-en-commun';
         })[0];
       } else {
-        this.parkingVeloLayerGroup.clearLayers();
+        this.garesIdfLayerGroup.clearLayers();
         this.launchPreviewSlider();
       }
     },
-    loadCovoit: function loadCovoit(_e) {
+    loadParkingVelo: function loadParkingVelo(_e) {
       var _this4 = this;
 
-      var greenIcon = new _leaflet.default.Icon({
-        iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+      var blueIcon = new _leaflet.default.Icon({
+        iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
         shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
         iconSize: [25, 41],
         iconAnchor: [12, 41],
@@ -26973,10 +27178,8 @@ var _default = {
       });
 
       if (_e.target.checked) {
-        var newArray = this.covoitPlaces.filter(function (_place) {
-          if (_place) {
-            return _place['Latitude'] < _this4.startingPointGeometry.lat + 0.1 && _place['Latitude'] > _this4.startingPointGeometry.lat - 0.1 && _place['Longitude'] > _this4.startingPointGeometry.long - 0.1 && _place['Longitude'] < _this4.startingPointGeometry.long + 0.1 || _place['Latitude'] < _this4.endPointGeometry.lat + 0.1 && _place['Latitude'] > _this4.endPointGeometry.lat - 0.1 && _place['Longitude'] > _this4.endPointGeometry.long - 0.1 && _place['Longitude'] < _this4.endPointGeometry.long + 0.1;
-          }
+        var newArray = this.parkingVeloPlaces.filter(function (_place) {
+          return _place.geometry && (_place.geometry.coordinates[1] < _this4.startingPointGeometry.lat + 0.01 && _place.geometry.coordinates[1] > _this4.startingPointGeometry.lat - 0.01 && _place.geometry.coordinates[0] > _this4.startingPointGeometry.long - 0.01 && _place.geometry.coordinates[0] < _this4.startingPointGeometry.long + 0.01 || _place.geometry.coordinates[1] < _this4.endPointGeometry.lat + 0.01 && _place.geometry.coordinates[1] > _this4.endPointGeometry.lat - 0.01 && _place.geometry.coordinates[0] > _this4.endPointGeometry.long - 0.01 && _place.geometry.coordinates[0] < _this4.endPointGeometry.long + 0.01);
         });
         var _iteratorNormalCompletion4 = true;
         var _didIteratorError4 = false;
@@ -26986,11 +27189,11 @@ var _default = {
           for (var _iterator4 = newArray[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
             var _place = _step4.value;
 
-            var marker = _leaflet.default.marker([_place['Latitude'], _place['Longitude']], {
-              icon: greenIcon
-            }).addTo(this.covoitLayerGroup);
+            var marker = _leaflet.default.marker([_place.geometry.coordinates[1], _place.geometry.coordinates[0]], {
+              icon: blueIcon
+            }).addTo(this.parkingVeloLayerGroup);
 
-            marker.bindPopup("<strong>".concat(_place['Ville'], "</strong><br>").concat(_place['Nom du lieu']));
+            marker.bindPopup("<strong>Couvert : </strong>".concat(_place.fields.couvert, "<br><strong>Payant : </strong>").concat(_place.fields.payant));
           }
         } catch (err) {
           _didIteratorError4 = true;
@@ -27009,16 +27212,18 @@ var _default = {
 
         window.clearInterval(this.displayedInterval);
         this.displayedPost = this.allPosts.filter(function (post) {
-          return post.transport_type === 'covoiturage';
+          return post.transport_type === 'velo';
         })[0];
       } else {
-        this.covoitLayerGroup.clearLayers();
+        this.parkingVeloLayerGroup.clearLayers();
         this.launchPreviewSlider();
       }
     },
-    loadElec: function loadElec(_e) {
-      var blueIcon = new _leaflet.default.Icon({
-        iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+    loadCovoit: function loadCovoit(_e) {
+      var _this5 = this;
+
+      var greenIcon = new _leaflet.default.Icon({
+        iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
         shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
         iconSize: [25, 41],
         iconAnchor: [12, 41],
@@ -27027,19 +27232,24 @@ var _default = {
       });
 
       if (_e.target.checked) {
+        var newArray = this.covoitPlaces.filter(function (_place) {
+          if (_place) {
+            return _place['Latitude'] < _this5.startingPointGeometry.lat + 0.1 && _place['Latitude'] > _this5.startingPointGeometry.lat - 0.1 && _place['Longitude'] > _this5.startingPointGeometry.long - 0.1 && _place['Longitude'] < _this5.startingPointGeometry.long + 0.1 || _place['Latitude'] < _this5.endPointGeometry.lat + 0.1 && _place['Latitude'] > _this5.endPointGeometry.lat - 0.1 && _place['Longitude'] > _this5.endPointGeometry.long - 0.1 && _place['Longitude'] < _this5.endPointGeometry.long + 0.1;
+          }
+        });
         var _iteratorNormalCompletion5 = true;
         var _didIteratorError5 = false;
         var _iteratorError5 = undefined;
 
         try {
-          for (var _iterator5 = this.elecPlaces[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+          for (var _iterator5 = newArray[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
             var _place = _step5.value;
 
-            var marker = _leaflet.default.marker([_place['Ylatitude'], _place['Xlongitude']], {
-              icon: blueIcon
-            }).addTo(this.elecLayerGroup);
+            var marker = _leaflet.default.marker([_place['Latitude'], _place['Longitude']], {
+              icon: greenIcon
+            }).addTo(this.covoitLayerGroup);
 
-            marker.bindPopup("<strong>".concat(_place['n_station'], "</strong><br>").concat(_place['n_amenageur']));
+            marker.bindPopup("<strong>".concat(_place['Ville'], "</strong><br>").concat(_place['Nom du lieu']));
           }
         } catch (err) {
           _didIteratorError5 = true;
@@ -27058,29 +27268,31 @@ var _default = {
 
         window.clearInterval(this.displayedInterval);
         this.displayedPost = this.allPosts.filter(function (post) {
-          return post.transport_type === 'voiture-electrique';
+          return post.transport_type === 'covoiturage';
         })[0];
       } else {
-        this.elecLayerGroup.clearLayers();
+        this.covoitLayerGroup.clearLayers();
         this.launchPreviewSlider();
       }
     },
-    loadGaresFrance: function loadGaresFrance(_e) {
-      var _this5 = this;
+    loadElec: function loadElec(_e) {
+      var _this6 = this;
 
-      var redIcon = new _leaflet.default.Icon({
-        iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+      var blueIcon = new _leaflet.default.Icon({
+        iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
         shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
         iconSize: [25, 41],
         iconAnchor: [12, 41],
         popupAnchor: [1, -34],
         shadowSize: [41, 41]
       });
+      var newArray = this.elecPlaces.filter(function (_place) {
+        if (_place) {
+          return _place['Ylatitude'] < _this6.startingPointGeometry.lat + 0.1 && _place['Ylatitude'] > _this6.startingPointGeometry.lat - 0.1 && _place['Xlongitude'] > _this6.startingPointGeometry.long - 0.1 && _place['Xlongitude'] < _this6.startingPointGeometry.long + 0.1 || _place['Ylatitude'] < _this6.endPointGeometry.lat + 0.1 && _place['Ylatitude'] > _this6.endPointGeometry.lat - 0.1 && _place['Xlongitude'] > _this6.endPointGeometry.long - 0.1 && _place['Xlongitude'] < _this6.endPointGeometry.long + 0.1;
+        }
+      });
 
       if (_e.target.checked) {
-        var newArray = this.garesFrancePlaces.filter(function (_place) {
-          return _place.geometry && (_place.geometry.coordinates[1] < _this5.startingPointGeometry.lat + 0.1 && _place.geometry.coordinates[1] > _this5.startingPointGeometry.lat - 0.1 && _place.geometry.coordinates[0] > _this5.startingPointGeometry.long - 0.1 && _place.geometry.coordinates[0] < _this5.startingPointGeometry.long + 0.1 || _place.geometry.coordinates[1] < _this5.endPointGeometry.lat + 0.1 && _place.geometry.coordinates[1] > _this5.endPointGeometry.lat - 0.1 && _place.geometry.coordinates[0] > _this5.endPointGeometry.long - 0.1 && _place.geometry.coordinates[0] < _this5.endPointGeometry.long + 0.1);
-        });
         var _iteratorNormalCompletion6 = true;
         var _didIteratorError6 = false;
         var _iteratorError6 = undefined;
@@ -27089,12 +27301,14 @@ var _default = {
           for (var _iterator6 = newArray[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
             var _place = _step6.value;
 
-            if (_place.geometry) {
-              var marker = _leaflet.default.marker([_place.geometry.coordinates[1], _place.geometry.coordinates[0]], {
-                icon: redIcon
-              }).addTo(this.garesFranceLayerGroup);
+            try {
+              var marker = _leaflet.default.marker([_place['Ylatitude'], _place['Xlongitude']], {
+                icon: blueIcon
+              }).addTo(this.elecLayerGroup);
 
-              marker.bindPopup("<strong>".concat(_place.fields.commune, "</strong>"));
+              marker.bindPopup("<strong>".concat(_place['n_station'], "</strong><br>").concat(_place['n_amenageur']));
+            } catch (error) {
+              console.log(error);
             }
           }
         } catch (err) {
@@ -27114,6 +27328,62 @@ var _default = {
 
         window.clearInterval(this.displayedInterval);
         this.displayedPost = this.allPosts.filter(function (post) {
+          return post.transport_type === 'voiture-electrique';
+        })[0];
+      } else {
+        this.elecLayerGroup.clearLayers();
+        this.launchPreviewSlider();
+      }
+    },
+    loadGaresFrance: function loadGaresFrance(_e) {
+      var _this7 = this;
+
+      var redIcon = new _leaflet.default.Icon({
+        iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      });
+
+      if (_e.target.checked) {
+        var newArray = this.garesFrancePlaces.filter(function (_place) {
+          return _place.geometry && (_place.geometry.coordinates[1] < _this7.startingPointGeometry.lat + 0.1 && _place.geometry.coordinates[1] > _this7.startingPointGeometry.lat - 0.1 && _place.geometry.coordinates[0] > _this7.startingPointGeometry.long - 0.1 && _place.geometry.coordinates[0] < _this7.startingPointGeometry.long + 0.1 || _place.geometry.coordinates[1] < _this7.endPointGeometry.lat + 0.1 && _place.geometry.coordinates[1] > _this7.endPointGeometry.lat - 0.1 && _place.geometry.coordinates[0] > _this7.endPointGeometry.long - 0.1 && _place.geometry.coordinates[0] < _this7.endPointGeometry.long + 0.1);
+        });
+        var _iteratorNormalCompletion7 = true;
+        var _didIteratorError7 = false;
+        var _iteratorError7 = undefined;
+
+        try {
+          for (var _iterator7 = newArray[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
+            var _place = _step7.value;
+
+            if (_place.geometry) {
+              var marker = _leaflet.default.marker([_place.geometry.coordinates[1], _place.geometry.coordinates[0]], {
+                icon: redIcon
+              }).addTo(this.garesFranceLayerGroup);
+
+              marker.bindPopup("<strong>".concat(_place.fields.commune, "</strong>"));
+            }
+          }
+        } catch (err) {
+          _didIteratorError7 = true;
+          _iteratorError7 = err;
+        } finally {
+          try {
+            if (!_iteratorNormalCompletion7 && _iterator7.return != null) {
+              _iterator7.return();
+            }
+          } finally {
+            if (_didIteratorError7) {
+              throw _iteratorError7;
+            }
+          }
+        }
+
+        window.clearInterval(this.displayedInterval);
+        this.displayedPost = this.allPosts.filter(function (post) {
           return post.transport_type === 'train';
         })[0];
       } else {
@@ -27123,26 +27393,26 @@ var _default = {
     },
     changeServiceType: function changeServiceType() {
       var radios = document.querySelectorAll('input[type="checkbox"]');
-      var _iteratorNormalCompletion7 = true;
-      var _didIteratorError7 = false;
-      var _iteratorError7 = undefined;
+      var _iteratorNormalCompletion8 = true;
+      var _didIteratorError8 = false;
+      var _iteratorError8 = undefined;
 
       try {
-        for (var _iterator7 = radios[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
-          var _radio = _step7.value;
+        for (var _iterator8 = radios[Symbol.iterator](), _step8; !(_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done); _iteratorNormalCompletion8 = true) {
+          var _radio = _step8.value;
           _radio.checked = false;
         }
       } catch (err) {
-        _didIteratorError7 = true;
-        _iteratorError7 = err;
+        _didIteratorError8 = true;
+        _iteratorError8 = err;
       } finally {
         try {
-          if (!_iteratorNormalCompletion7 && _iterator7.return != null) {
-            _iterator7.return();
+          if (!_iteratorNormalCompletion8 && _iterator8.return != null) {
+            _iterator8.return();
           }
         } finally {
-          if (_didIteratorError7) {
-            throw _iteratorError7;
+          if (_didIteratorError8) {
+            throw _iteratorError8;
           }
         }
       }
@@ -27174,26 +27444,26 @@ var _default = {
       }
     },
     launchPreviewSlider: function launchPreviewSlider() {
-      var _this6 = this;
+      var _this8 = this;
 
       if (this.quotidienSelected) {
         this.displayedInterval = window.setInterval(function () {
-          var potentialPosts = _this6.allPosts.filter(function (_post) {
-            return _post != _this6.displayedPost && (_post.transport_type === 'velo' || _post.transport_type == 'transports-en-commun');
+          var potentialPosts = _this8.allPosts.filter(function (_post) {
+            return _post != _this8.displayedPost && (_post.transport_type === 'velo' || _post.transport_type == 'transports-en-commun');
           });
 
           if (potentialPosts.length > 0) {
-            _this6.displayedPost = potentialPosts[Math.floor(Math.random() * (potentialPosts.length - 1))];
+            _this8.displayedPost = potentialPosts[Math.floor(Math.random() * (potentialPosts.length - 1))];
           }
         }, 10000);
       } else if (this.franceSelected) {
         this.displayedInterval = window.setInterval(function () {
-          var potentialPosts = _this6.allPosts.filter(function (_post) {
-            return _post != _this6.displayedPost && (_post.transport_type === 'voiture-electrique' || _post.transport_type == 'train' || _post.transport_type == 'covoiturage');
+          var potentialPosts = _this8.allPosts.filter(function (_post) {
+            return _post != _this8.displayedPost && (_post.transport_type === 'voiture-electrique' || _post.transport_type == 'train' || _post.transport_type == 'covoiturage');
           });
 
           if (potentialPosts.length > 0) {
-            _this6.displayedPost = potentialPosts[Math.floor(Math.random() * (potentialPosts.length - 1))];
+            _this8.displayedPost = potentialPosts[Math.floor(Math.random() * (potentialPosts.length - 1))];
           }
         }, 10000);
       }
@@ -27214,9 +27484,8 @@ var _default = {
   },
   mounted: function mounted() {
     this.mapInit();
-    this.autocomplete();
+    this.autocompleteStart();
     this.launchPreviewSlider();
-    console.log(this.forwardPosts);
   }
 };
 exports.default = _default;
@@ -27234,217 +27503,311 @@ exports.default = _default;
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "home" },
     [
-      _c("Header", { attrs: { "home-url": _vm.homeUrl } }),
-      _vm._v(" "),
-      _vm._m(0),
-      _vm._v(" "),
-      _c("div", { staticClass: "transport-types" }, [
-        _c("input", {
-          attrs: {
-            name: "serviceType",
-            type: "radio",
-            id: "quotidien",
-            checked: ""
-          },
-          on: { change: _vm.changeServiceType }
-        }),
-        _vm._v(" "),
-        _vm._m(1),
-        _vm._v(" "),
-        _c("input", {
-          attrs: { name: "serviceType", type: "radio", id: "france" },
-          on: { change: _vm.changeServiceType }
-        }),
-        _vm._v(" "),
-        _vm._m(2)
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "tool" }, [
-        _c("div", { staticClass: "sidebar-left" }, [
-          _c("div", { staticClass: "locations" }, [
-            _c("div", { staticClass: "field" }, [
-              _vm._m(3),
-              _vm._v(" "),
-              _c("input", {
-                ref: "autocompleteStart",
-                attrs: {
-                  placeholder: "Exemple : Place de la Nation",
-                  type: "text",
-                  name: "depart",
-                  id: "depart"
-                }
-              })
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "field" }, [
-              _vm._m(4),
-              _vm._v(" "),
-              _c("input", {
-                ref: "autocompleteEnd",
-                attrs: {
-                  placeholder: "Exemple : Rue du Faubourg Saint-Honoré",
-                  type: "text",
-                  name: "arrivee",
-                  id: "arrivee"
-                }
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("h3", [_vm._v("Filtres")]),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "filters filters-quotidien",
-              class: { hidden: _vm.franceSelected }
-            },
-            [
-              _c("input", {
-                attrs: { id: "parking", type: "checkbox" },
-                on: {
-                  change: function(_e) {
-                    return _vm.loadParkingVelo(_e)
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c("label", { attrs: { for: "parking" } }, [
-                _vm._v("Voir les parkings à vélo")
-              ]),
-              _vm._v(" "),
-              _c("input", {
-                attrs: { id: "veloLibres", type: "checkbox" },
-                on: {
-                  change: function(_e) {
-                    return _vm.loadVeloLibres(_e)
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c("label", { attrs: { for: "veloLibres" } }, [
-                _vm._v("Voir les vélos en libre service")
-              ]),
-              _vm._v(" "),
-              _c("input", {
-                attrs: { id: "garesidf", type: "checkbox" },
-                on: {
-                  change: function(_e) {
-                    return _vm.loadGaresIdf(_e)
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c("label", { attrs: { for: "garesidf" } }, [
-                _vm._v("Voir les gares du réseau ferroviaire")
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "filters filters-france",
-              class: { hidden: _vm.quotidienSelected }
-            },
-            [
-              _c("input", {
-                attrs: { id: "covoit", type: "checkbox" },
-                on: {
-                  change: function(_e) {
-                    return _vm.loadCovoit(_e)
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c("label", { attrs: { for: "covoit" } }, [
-                _vm._v("Voir les aires de covoiturages")
-              ]),
-              _vm._v(" "),
-              _c("input", {
-                attrs: { id: "elec", type: "checkbox" },
-                on: {
-                  change: function(_e) {
-                    return _vm.loadElec(_e)
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c("label", { attrs: { for: "elec" } }, [
-                _vm._v(
-                  "Voir les bornes de rechargement pour voiture electrique"
-                )
-              ]),
-              _vm._v(" "),
-              _c("input", {
-                attrs: { id: "garesfr", type: "checkbox" },
-                on: {
-                  change: function(_e) {
-                    return _vm.loadGaresFrance(_e)
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c("label", { attrs: { for: "garesfr" } }, [
-                _vm._v("Voir les gares du réseau ferroviaire")
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "Rien ne s'affiche ? Essayez de chosir un point de départ et de destination !"
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { attrs: { id: "map" } }),
-        _vm._v(" "),
-        _c("div", { staticClass: "sidebar-right" }, [
-          _c("div", { ref: "preview", staticClass: "article-preview" }, [
-            _c("h3", [_vm._v(_vm._s(_vm.displayedPost.title))]),
-            _vm._v(" "),
-            _c("p", [_vm._v(_vm._s(_vm.displayedPost.incent))]),
-            _vm._v(" "),
-            _c("img", {
-              attrs: { src: _vm.displayedPost.thumbnail_url, alt: "" }
-            }),
-            _vm._v(" "),
-            _c("a", { attrs: { href: _vm.displayedPost.permalink } }, [
-              _vm._v("En savoir plus")
-            ])
-          ]),
-          _vm._v(" "),
-          _vm._m(5)
-        ])
-      ]),
-      _vm._v(" "),
-      _c("h2", [_vm._v("Une sélection d'articles")]),
-      _vm._v(" "),
       _c(
         "div",
-        { staticClass: "forward-posts-container" },
-        _vm._l(_vm.forwardPosts, function(_post) {
-          return _c(
+        { staticClass: "home" },
+        [
+          _c("Header", { attrs: { "home-url": _vm.homeUrl } }),
+          _vm._v(" "),
+          _vm._m(0),
+          _vm._v(" "),
+          _c("div", { staticClass: "transport-types" }, [
+            _c("input", {
+              attrs: {
+                name: "serviceType",
+                type: "radio",
+                id: "quotidien",
+                checked: ""
+              },
+              on: { change: _vm.changeServiceType }
+            }),
+            _vm._v(" "),
+            _vm._m(1),
+            _vm._v(" "),
+            _c("input", {
+              attrs: { name: "serviceType", type: "radio", id: "france" },
+              on: { change: _vm.changeServiceType }
+            }),
+            _vm._v(" "),
+            _vm._m(2)
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "tool" }, [
+            _c(
+              "div",
+              {
+                staticClass: "sidebar-left",
+                class: { "flex-start": _vm.endPointGeometry.lat !== null }
+              },
+              [
+                _c("div", { staticClass: "locations" }, [
+                  _c("div", { staticClass: "field" }, [
+                    _vm._m(3),
+                    _vm._v(" "),
+                    _c("input", {
+                      ref: "autocompleteStart",
+                      attrs: {
+                        placeholder: "Exemple : Place de la Nation",
+                        type: "text",
+                        name: "depart",
+                        id: "depart"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _vm.startingPointGeometry.lat !== null
+                    ? _c("div", { staticClass: "field" }, [
+                        _vm._m(4),
+                        _vm._v(" "),
+                        _c("input", {
+                          ref: "autocompleteEnd",
+                          attrs: {
+                            placeholder:
+                              "Exemple : Rue du Faubourg Saint-Honoré",
+                            type: "text",
+                            name: "arrivee",
+                            id: "arrivee"
+                          }
+                        })
+                      ])
+                    : _vm._e()
+                ]),
+                _vm._v(" "),
+                _vm.endPointGeometry.lat !== null
+                  ? _c("div", [
+                      _c("h3", [_vm._v("Filtres")]),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "filters filters-quotidien",
+                          class: { hidden: _vm.franceSelected }
+                        },
+                        [
+                          _c("input", {
+                            attrs: { id: "parking", type: "checkbox" },
+                            on: {
+                              change: function(_e) {
+                                return _vm.loadParkingVelo(_e)
+                              }
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("label", { attrs: { for: "parking" } }, [
+                            _vm._v("Voir les parkings à vélo")
+                          ]),
+                          _vm._v(" "),
+                          _c("input", {
+                            attrs: { id: "veloLibres", type: "checkbox" },
+                            on: {
+                              change: function(_e) {
+                                return _vm.loadVeloLibres(_e)
+                              }
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("label", { attrs: { for: "veloLibres" } }, [
+                            _vm._v("Voir les vélos en libre service")
+                          ]),
+                          _vm._v(" "),
+                          _c("input", {
+                            attrs: { id: "garesidf", type: "checkbox" },
+                            on: {
+                              change: function(_e) {
+                                return _vm.loadGaresIdf(_e)
+                              }
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("label", { attrs: { for: "garesidf" } }, [
+                            _vm._v("Voir les gares du réseau ferroviaire")
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "filters filters-france",
+                          class: { hidden: _vm.quotidienSelected }
+                        },
+                        [
+                          _c("input", {
+                            attrs: { id: "covoit", type: "checkbox" },
+                            on: {
+                              change: function(_e) {
+                                return _vm.loadCovoit(_e)
+                              }
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("label", { attrs: { for: "covoit" } }, [
+                            _vm._v("Voir les aires de covoiturages")
+                          ]),
+                          _vm._v(" "),
+                          _c("input", {
+                            attrs: { id: "elec", type: "checkbox" },
+                            on: {
+                              change: function(_e) {
+                                return _vm.loadElec(_e)
+                              }
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("label", { attrs: { for: "elec" } }, [
+                            _vm._v(
+                              "Voir les bornes de rechargement pour voiture electrique"
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("input", {
+                            attrs: { id: "garesfr", type: "checkbox" },
+                            on: {
+                              change: function(_e) {
+                                return _vm.loadGaresFrance(_e)
+                              }
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("label", { attrs: { for: "garesfr" } }, [
+                            _vm._v("Voir les gares du réseau ferroviaire")
+                          ])
+                        ]
+                      )
+                    ])
+                  : _vm._e()
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { attrs: { id: "map" } }),
+            _vm._v(" "),
+            _c("div", { staticClass: "sidebar-right" }, [
+              _c("div", { ref: "preview", staticClass: "article-preview" }, [
+                _c("h3", [
+                  _vm._v(_vm._s(_vm.replaceQuote(_vm.displayedPost.title)))
+                ]),
+                _vm._v(" "),
+                _c("p", [_vm._v(_vm._s(_vm.displayedPost.incent))]),
+                _vm._v(" "),
+                _c("img", {
+                  attrs: { src: _vm.displayedPost.thumbnail_url, alt: "" }
+                }),
+                _vm._v(" "),
+                _c("a", { attrs: { href: _vm.displayedPost.permalink } }, [
+                  _vm._v("En savoir plus")
+                ])
+              ]),
+              _vm._v(" "),
+              _vm._m(5)
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "share" }, [
+            _c("a", { attrs: { href: "" } }, [
+              _c(
+                "svg",
+                {
+                  attrs: {
+                    width: "29",
+                    height: "29",
+                    viewBox: "0 0 29 29",
+                    fill: "none",
+                    xmlns: "http://www.w3.org/2000/svg"
+                  }
+                },
+                [
+                  _c("path", {
+                    attrs: {
+                      d:
+                        "M21.7488 0.00603394L17.9882 0C13.7633 0 11.033 2.80125 11.033 7.13694V10.4275H7.25184C6.92511 10.4275 6.66052 10.6924 6.66052 11.0192V15.7869C6.66052 16.1136 6.92541 16.3782 7.25184 16.3782H11.033V28.4087C11.033 28.7354 11.2976 29 11.6243 29H16.5576C16.8843 29 17.1489 28.7351 17.1489 28.4087V16.3782H21.5699C21.8967 16.3782 22.1612 16.1136 22.1612 15.7869L22.1631 11.0192C22.1631 10.8623 22.1006 10.712 21.9899 10.601C21.8792 10.49 21.7283 10.4275 21.5714 10.4275H17.1489V7.63806C17.1489 6.29732 17.4684 5.61669 19.2149 5.61669L21.7482 5.61578C22.0747 5.61578 22.3392 5.35089 22.3392 5.02446V0.59736C22.3392 0.271225 22.075 0.00663733 21.7488 0.00603394Z",
+                      fill: "white"
+                    }
+                  })
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("a", { attrs: { href: "" } }, [
+              _c(
+                "svg",
+                {
+                  attrs: {
+                    width: "29",
+                    height: "29",
+                    viewBox: "0 0 29 29",
+                    fill: "none",
+                    xmlns: "http://www.w3.org/2000/svg"
+                  }
+                },
+                [
+                  _c("path", {
+                    attrs: {
+                      d:
+                        "M29 5.50894C27.9326 5.9819 26.7873 6.30265 25.584 6.44585C26.8127 5.7101 27.7532 4.54308 28.1989 3.15677C27.0464 3.83813 25.7743 4.33288 24.4188 4.60108C23.3333 3.44312 21.7893 2.72186 20.0768 2.72186C16.7914 2.72186 14.1275 5.38574 14.1275 8.66938C14.1275 9.13508 14.1801 9.58994 14.2816 10.0249C9.338 9.77659 4.9544 7.40811 2.02052 3.80913C1.50767 4.68623 1.21592 5.70825 1.21592 6.79921C1.21592 8.86328 2.26698 10.6845 3.86169 11.75C2.88673 11.7174 1.96977 11.4492 1.16701 11.0034V11.0777C1.16701 13.959 3.21838 16.3638 5.93841 16.9111C5.44006 17.0452 4.91455 17.1195 4.3709 17.1195C3.98674 17.1195 3.61524 17.0814 3.25099 17.0089C4.00844 19.3738 6.20481 21.0935 8.80709 21.1407C6.77202 22.7354 4.206 23.6831 1.41892 23.6831C0.938709 23.6831 0.465706 23.6541 0 23.6016C2.63308 25.2924 5.75906 26.2782 9.11879 26.2782C20.0624 26.2782 26.0444 17.2137 26.0444 9.35258L26.0244 8.58243C27.1932 7.74877 28.2044 6.70136 29 5.50894Z",
+                      fill: "white"
+                    }
+                  })
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("a", { attrs: { href: "" } }, [
+              _c(
+                "svg",
+                {
+                  attrs: {
+                    width: "30",
+                    height: "30",
+                    viewBox: "0 0 30 30",
+                    fill: "none",
+                    xmlns: "http://www.w3.org/2000/svg"
+                  }
+                },
+                [
+                  _c("path", {
+                    attrs: {
+                      d:
+                        "M28.764 5.35159H1.23598C0.55336 5.35159 0 5.90495 0 6.58757V23.4124C0 24.095 0.55336 24.6484 1.23598 24.6484H28.764C29.4466 24.6484 30 24.095 30 23.4124V6.58757C30 5.90495 29.4466 5.35159 28.764 5.35159ZM1.23598 6.32226H28.764C28.8802 6.32282 28.9824 6.39886 29.0164 6.50992L15 15.2653L0.983607 6.50992C1.01758 6.39886 1.11982 6.32282 1.23598 6.32226ZM0.970664 7.61648L11.0526 13.9129L0.970664 21.9111V7.61648ZM29.0293 23.4059C29.0293 23.5525 28.9105 23.6713 28.764 23.6713H1.23598C1.08949 23.6713 0.970664 23.5524 0.970664 23.4059V23.1471L11.9262 14.4888L14.7412 16.2489C14.8993 16.3487 15.1007 16.3487 15.2588 16.2489L18.0738 14.4888L29.0293 23.1471V23.4059ZM29.0293 21.9111L18.9215 13.9387L29.0293 7.67472V21.9111Z",
+                      fill: "white"
+                    }
+                  })
+                ]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("h2", [_vm._v("Découvrez plus d'articles")]),
+          _vm._v(" "),
+          _c(
             "div",
-            { key: _post.ID, staticClass: "forward-posts-single" },
-            [
-              _c("img", { attrs: { src: _post.post_thumbnail_url, alt: "" } }),
-              _vm._v(" "),
-              _c("h3", [_vm._v(_vm._s(_post.post_title))]),
-              _vm._v(" "),
-              _c("p", [_vm._v(_vm._s(_post.post_excerpt))]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: _post.post_url } }, [
-                _vm._v("En savoir plus")
-              ])
-            ]
+            { staticClass: "forward-posts-container" },
+            _vm._l(_vm.forwardPosts, function(_post) {
+              return _c(
+                "div",
+                { key: _post.ID, staticClass: "forward-posts-single" },
+                [
+                  _c("img", {
+                    attrs: { src: _post.post_thumbnail_url, alt: "" }
+                  }),
+                  _vm._v(" "),
+                  _c("h3", [_vm._v(_vm._s(_post.post_title))]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v(_vm._s(_post.post_excerpt))]),
+                  _vm._v(" "),
+                  _c("a", { attrs: { href: _post.post_url } }, [
+                    _vm._v("En savoir plus")
+                  ])
+                ]
+              )
+            }),
+            0
           )
-        }),
-        0
-      )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c("Footer")
     ],
     1
   )
@@ -27460,10 +27823,10 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("p", [
-        _vm._v("\n            Grâce à "),
+        _vm._v("\n                Grâce à "),
         _c("strong", [_vm._v("Feuille de Route")]),
         _vm._v(
-          " vous pouvez découvrir toutes les informations sur le developpement durable et les transports, et choisir la meilleur alternative aux transports polluants pour votre trajet !\n        "
+          " vous pouvez découvrir toutes les informations sur le developpement durable et les transports, et choisir la meilleur alternative aux transports polluants pour votre trajet !\n            "
         )
       ])
     ])
@@ -27517,9 +27880,22 @@ var staticRenderFns = [
         )
       ]),
       _vm._v(" "),
-      _c("button", [_vm._v("Télécharger")]),
+      _c("button", { attrs: { disabled: "", title: "Bientôt disponible" } }, [
+        _vm._v("Télécharger")
+      ]),
       _vm._v(" "),
-      _c("a", { attrs: { href: "" } }, [_vm._v("Comment l'ajouter ?")])
+      _c(
+        "a",
+        {
+          attrs: {
+            target: "_blank",
+            rel: "noopener",
+            href:
+              "https://support.google.com/mymaps/answer/3024836?co=GENIE.Platform%3DDesktop&hl=en"
+          }
+        },
+        [_vm._v("Comment l'ajouter ?")]
+      )
     ])
   }
 ]
@@ -27555,7 +27931,7 @@ render._withStripped = true
       
       }
     })();
-},{"leaflet":"../node_modules/leaflet/dist/leaflet-src.js","./Header":"components/Header.vue","./..\\imgs\\check.png":[["check.d0c2d9fc.png","imgs/check.png"],"imgs/check.png"],"./..\\imgs\\arrow.png":[["arrow.a57d9086.png","imgs/arrow.png"],"imgs/arrow.png"],"./..\\imgs\\arrow-blue.png":[["arrow-blue.c92f9e6c.png","imgs/arrow-blue.png"],"imgs/arrow-blue.png"],"_css_loader":"../../../../../../../Users/Alphonse/AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Single.vue":[function(require,module,exports) {
+},{"leaflet":"../node_modules/leaflet/dist/leaflet-src.js","./Header":"components/Header.vue","./Footer":"components/Footer.vue","./..\\imgs\\check.png":[["check.d0c2d9fc.png","imgs/check.png"],"imgs/check.png"],"./..\\imgs\\arrow.png":[["arrow.a57d9086.png","imgs/arrow.png"],"imgs/arrow.png"],"./..\\imgs\\arrow-blue.png":[["arrow-blue.c92f9e6c.png","imgs/arrow-blue.png"],"imgs/arrow-blue.png"],"_css_loader":"../../../../../../../Users/Alphonse/AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Single.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

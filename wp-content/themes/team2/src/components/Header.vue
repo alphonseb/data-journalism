@@ -59,6 +59,7 @@ header{
             border-radius: 100%;
             padding: 1.3rem;
             background-color: var(--dark-blue);
+            margin-left: 1rem;
             svg{
                 width: 16px;
                 height: 16px;
