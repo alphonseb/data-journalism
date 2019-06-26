@@ -117,6 +117,9 @@ export default {
     .front{
         backface-visibility: hidden;
         transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        p{
+            margin: 0;
+        }
         img{
             width: 100%;
             height: 100%;
@@ -164,6 +167,17 @@ export default {
 
 .graph_large .front img{
     object-fit: contain;
+}
+
+.number .front{
+    font-size: 8rem;
+    p{
+        margin: 0;
+    }
+}
+
+.word .front{
+    font-size: 4rem;
 }
 </style>
 
