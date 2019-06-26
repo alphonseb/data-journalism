@@ -4,6 +4,7 @@
             <a :href="homeUrl">
                 <img :src="`${baseUrl}/logo.png`" alt="">
             </a>
+            <span>Feuille de route</span>
         </div>
         <div class="socials">
             <a href="">
@@ -40,9 +41,15 @@ header{
     justify-content: space-between;
     align-items: center;
     .logo{
+        display: flex;
+        align-items: center;
         img{
             width: 80px;
+            margin-right: 2rem;
         }
+        color: var(--green);
+        font-weight: bold;
+        font-size: 2rem;
     }
     .socials{
         a{

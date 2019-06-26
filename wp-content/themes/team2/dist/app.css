@@ -37,8 +37,16 @@ header[data-v-9d1b62] {
   justify-content: space-between;
   align-items: center;
 }
+header .logo[data-v-9d1b62] {
+  display: flex;
+  align-items: center;
+  color: var(--green);
+  font-weight: bold;
+  font-size: 2rem;
+}
 header .logo img[data-v-9d1b62] {
   width: 80px;
+  margin-right: 2rem;
 }
 header .socials a[data-v-9d1b62] {
   display: inline-flex;

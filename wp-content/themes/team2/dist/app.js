@@ -26462,6 +26462,7 @@ exports.default = void 0;
 //
 //
 //
+//
 var _default = {
   name: 'Header',
   data: function data() {
@@ -26490,7 +26491,9 @@ exports.default = _default;
     _c("div", { staticClass: "logo" }, [
       _c("a", { attrs: { href: _vm.homeUrl } }, [
         _c("img", { attrs: { src: _vm.baseUrl + "/logo.png", alt: "" } })
-      ])
+      ]),
+      _vm._v(" "),
+      _c("span", [_vm._v("Feuille de route")])
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "socials" }, [
