@@ -366,14 +366,14 @@ export default {
                     if(_place){
                         
                         return (
-                            (_place['Latitude'] < this.startingPointGeometry.lat + 0.1 
-                            && _place['Latitude'] > this.startingPointGeometry.lat - 0.1
-                            && _place['Longitude'] > this.startingPointGeometry.long - 0.1
-                            && _place['Longitude'] < this.startingPointGeometry.long + 0.1)
-                            || (_place['Latitude'] < this.endPointGeometry.lat + 0.1 
-                            && _place['Latitude'] > this.endPointGeometry.lat - 0.1
-                            && _place['Longitude'] > this.endPointGeometry.long - 0.1
-                            && _place['Longitude'] < this.endPointGeometry.long + 0.1)
+                            (_place['Latitude'] < this.startingPointGeometry.lat + 0.08 
+                            && _place['Latitude'] > this.startingPointGeometry.lat - 0.08
+                            && _place['Longitude'] > this.startingPointGeometry.long - 0.08
+                            && _place['Longitude'] < this.startingPointGeometry.long + 0.08)
+                            || (_place['Latitude'] < this.endPointGeometry.lat + 0.08 
+                            && _place['Latitude'] > this.endPointGeometry.lat - 0.08
+                            && _place['Longitude'] > this.endPointGeometry.long - 0.08
+                            && _place['Longitude'] < this.endPointGeometry.long + 0.08)
                         )
                     }
                     

@@ -27262,7 +27262,7 @@ var _default = {
       if (_e.target.checked) {
         var newArray = this.covoitPlaces.filter(function (_place) {
           if (_place) {
-            return _place['Latitude'] < _this5.startingPointGeometry.lat + 0.1 && _place['Latitude'] > _this5.startingPointGeometry.lat - 0.1 && _place['Longitude'] > _this5.startingPointGeometry.long - 0.1 && _place['Longitude'] < _this5.startingPointGeometry.long + 0.1 || _place['Latitude'] < _this5.endPointGeometry.lat + 0.1 && _place['Latitude'] > _this5.endPointGeometry.lat - 0.1 && _place['Longitude'] > _this5.endPointGeometry.long - 0.1 && _place['Longitude'] < _this5.endPointGeometry.long + 0.1;
+            return _place['Latitude'] < _this5.startingPointGeometry.lat + 0.08 && _place['Latitude'] > _this5.startingPointGeometry.lat - 0.08 && _place['Longitude'] > _this5.startingPointGeometry.long - 0.08 && _place['Longitude'] < _this5.startingPointGeometry.long + 0.08 || _place['Latitude'] < _this5.endPointGeometry.lat + 0.08 && _place['Latitude'] > _this5.endPointGeometry.lat - 0.08 && _place['Longitude'] > _this5.endPointGeometry.long - 0.08 && _place['Longitude'] < _this5.endPointGeometry.long + 0.08;
           }
         });
         var _iteratorNormalCompletion5 = true;
