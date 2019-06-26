@@ -38,6 +38,12 @@ export default {
 header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    .logo{
+        img{
+            width: 80px;
+        }
+    }
     .socials{
         a{
             display: inline-flex;

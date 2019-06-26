@@ -35,6 +35,10 @@ p{
 header[data-v-9d1b62] {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+header .logo img[data-v-9d1b62] {
+  width: 80px;
 }
 header .socials a[data-v-9d1b62] {
   display: inline-flex;
