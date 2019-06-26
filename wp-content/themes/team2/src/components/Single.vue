@@ -1,5 +1,6 @@
 <template>
     <div class="single">
+        <a class="home-link" :href="homeUrl">Revenir à l'accueil</a>
         <h1>{{ title }}</h1>
         <p>
             {{excerpt}}
@@ -24,7 +25,8 @@ export default {
         title: String,
         excerpt: String,
         thumbnail_url: String,
-        vignettes_string: String
+        vignettes_string: String,
+        homeUrl: String
     },
     data() {
         return {
@@ -45,6 +47,39 @@ export default {
     perspective: 800px;
     max-width: 120rem;
     margin: 0 auto;
+}
+
+.home-link{
+    display: inline-block;
+    background: var(--dark-blue);
+    color: white;
+    padding: 1.2rem;
+    text-decoration: none;
+    padding-left: 30px;
+    position: relative;
+    font-size: 1.4rem;
+    border-radius: 50px;
+    transition: transform 0.2s;
+    &:hover{
+        box-shadow: var(--shadow);
+        transform: translateY(-5px);
+    }
+    &:active{
+        transform: translateY(0);
+        box-shadow: none;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        left: 10px;
+        width: 16px;
+        height: 16px;
+        background-image: url(../imgs/arrow-white.png);
+        background-repeat: no-repeat;
+        background-size: contain; 
+    } 
 }
 
 .vignettes-container { 
@@ -70,7 +105,7 @@ export default {
     justify-content: center;
     align-items: center;
     .front, .back{
-        border: solid 2px black;
+        border: solid 2px var(--dark-blue);
         border-radius: 4px;
         padding: 1rem;
         width: 100%;
@@ -95,6 +130,7 @@ export default {
         transform: translate(-50%, -50%) rotateY(-180deg);
         transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         backface-visibility: hidden;
+        color: var(--dark-blue);
     }
     &:hover{
         .front{
@@ -109,7 +145,7 @@ export default {
 .number, .word, .photo{
     .front, .back{
         color: white;
-        background: black;
+        background: var(--dark-blue);
     }
 }
 </style>

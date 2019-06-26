@@ -13,7 +13,7 @@ if ($posts_query->have_posts()) {
         $all_posts[] = [
             'title' => get_the_title(),
             'incent' => get_field('incent'),
-            'thumbnail_url' => get_the_post_thumbnail_url(),
+            'thumbnail_url' => get_the_post_thumbnail_url(get_the_ID(), 'preview-thumbnail'),
             'permalink' => get_the_permalink(),
             'transport_type' => get_the_terms(get_the_ID(), 'category')[0]->slug
         ];
@@ -57,7 +57,7 @@ foreach (get_field('forward_posts') as $post_key => $post) {
     foreach ($post as $key => $value) {
         $forward_posts[$post_key][$key] = $value;
     }
-    $forward_posts[$post_key]['post_thumbnail_url'] = get_the_post_thumbnail_url();
+    $forward_posts[$post_key]['post_thumbnail_url'] = get_the_post_thumbnail_url(get_the_ID(), 'list-thumbnail');
     $forward_posts[$post_key]['post_url'] = get_the_permalink();
 }
 wp_reset_postdata();

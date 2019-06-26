@@ -3,6 +3,8 @@
     
     $excerpt = get_the_excerpt();
     
+    $home_url = get_home_url();
+    
     // $thumbnail_url = get_the_post_thumbnail_url();
     
     $vignettes = [];
@@ -26,6 +28,7 @@
     excerpt="<?= $excerpt ?>"
     thumbnail_url="<?= $thumbnail_url ?>"
     vignettes_string="<?= htmlspecialchars(json_encode($vignettes), ENT_QUOTES, 'UTF-8') ?>"
+    home-url="<?= $home_url ?>"
     >
     </Single>
 </div>

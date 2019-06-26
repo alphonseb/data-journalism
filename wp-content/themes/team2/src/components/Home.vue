@@ -61,10 +61,10 @@
         <h2>Une sélection d'articles</h2>
         <div class="forward-posts-container">
             <div class="forward-posts-single" v-for="_post in forwardPosts" :key="_post.ID">
-                <a :href="_post.post_url">
-                    <h3>{{_post.post_title}}</h3>
-                    <img :src="_post.post_thumbnail_url" alt="">
-                </a>
+                <img :src="_post.post_thumbnail_url" alt="">
+                <h3>{{_post.post_title}}</h3>
+                <p>{{_post.post_excerpt}}</p>
+                <a :href="_post.post_url">En savoir plus</a>
             </div>
         </div>
     </div>
@@ -442,11 +442,18 @@ export default {
         this.mapInit()
         this.autocomplete()
         this.launchPreviewSlider()
+        console.log(this.forwardPosts);
+        
     }
 }
 </script>
 
 <style lang="scss" scoped>
+
+    .home{
+        margin: 0 auto;
+        max-width: 120rem;
+    }
     #map{
         width: 550px;
         box-shadow: var(--shadow);
@@ -485,6 +492,7 @@ export default {
         justify-content: space-between;
         max-width: 120rem;
         margin: 0 auto;
+        margin-bottom: 6rem;
         .field{
             label{
                 font-weight: bold;
@@ -563,6 +571,7 @@ export default {
                 border-radius: 4px;
                 padding: 2rem 1.5rem;
                 margin-bottom: 1.5rem;
+                box-shadow: var(--shadow);
                 * {
                     transition: opacity 0.2s;
                 }
@@ -580,7 +589,7 @@ export default {
                     width: 100%;
                     max-height: 200px;
                     object-fit: cover;
-                    margin-bottom: 1rem;
+                    margin-bottom: 2rem;
                 }
                 a{
                     color: inherit;
@@ -597,6 +606,10 @@ export default {
                         height: 16px;
                         background: url(../imgs/arrow.png) no-repeat;
                         background-position: center;
+                        transition: transform 0.2s;
+                    }
+                    &:hover::after{
+                        transform: translateY(-50%) translateX(5px);
                     }
                 }
             }
@@ -604,6 +617,7 @@ export default {
                 background-color: var(--red);
                 border-radius: 4px;
                 padding: 2rem 1.5rem;
+                box-shadow: var(--shadow);
                 p{
                     font-size: 1.4rem;
                     
@@ -633,6 +647,60 @@ export default {
         text-align: center;
         p{
             font-style: italic;
+        }
+    }
+    
+    .forward-posts-container{
+        display: flex;
+        justify-content: space-between;
+        .forward-posts-single{
+            width: 30%;
+            padding: 1.5rem 2rem;
+            background: var(--dark-blue);
+            color: white;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow);
+            img{
+                width: 100%;
+            }
+            p{
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
+            }
+            a{
+                display: inline-block;
+                background: white;
+                font-weight: bold;
+                padding: 1rem;
+                border-radius: 50px;
+                color: black;
+                padding-right: 30px;
+                position: relative;
+                text-decoration: none;
+                margin-left: auto;
+                font-size: 1.4rem;
+                transition: transform 0.2s;
+                &:hover{
+                    box-shadow: var(--shadow);
+                    transform: translateY(-5px);
+                }
+                &:active{
+                    transform: translateY(0);
+                    box-shadow: none;
+                }
+                &::after{
+                    content: '';
+                    background-image: url(../imgs/arrow-blue.png);
+                    width: 16px;
+                    height: 16px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 10px;
+                }
+            }
         }
     }
 </style>
