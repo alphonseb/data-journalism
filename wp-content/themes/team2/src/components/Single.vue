@@ -170,7 +170,7 @@ export default {
 }
 
 .number .front{
-    font-size: 8rem;
+    font-size: 6rem;
     p{
         margin: 0;
     }
