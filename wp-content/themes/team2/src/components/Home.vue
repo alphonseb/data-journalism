@@ -1,5 +1,6 @@
 <template>
     <div class="home">
+        <Header :home-url="homeUrl"></Header>
         <div class="title">
             <h1>Prêts à découvrir des alternatives à la voiture et à l'avion ?</h1>
             <p>
@@ -73,8 +74,13 @@
 <script>
 import Leaflet from 'leaflet'
 
+import Header from './Header'
+
 export default {
     name: 'Home',
+    components: {
+        Header
+    },
     data() {
         return {
             baseURL: window.baseURL,
@@ -110,6 +116,7 @@ export default {
         }
     },
     props: {
+        homeUrl: String,
         covoit: String,
         elec: String,
         garesFrance: String,

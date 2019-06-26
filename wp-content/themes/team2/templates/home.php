@@ -1,5 +1,7 @@
 <?php
 
+$home_url = get_home_url();
+
 $all_posts =  [];
 $args = [
     'post_type' => 'post',
@@ -74,6 +76,7 @@ wp_reset_postdata();
         gares-france="<?= htmlspecialchars($garesFrance_json, ENT_QUOTES, 'UTF-8') ?>"
         forward-posts-string="<?= htmlspecialchars(json_encode($forward_posts), ENT_QUOTES, 'UTF-8') ?>"
         all-posts-string="<?= htmlspecialchars(json_encode($all_posts), ENT_QUOTES, 'UTF-8') ?>"
+        home-url="<?= $home_url ?>"
     >
     </Home>
 </div>
