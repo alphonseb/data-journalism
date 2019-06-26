@@ -405,6 +405,7 @@ p{
 }
 .number .front p[data-v-ecd88d] {
   margin: 0;
+  text-align: center;
 }
 .word .front[data-v-ecd88d] {
   font-size: 4rem;

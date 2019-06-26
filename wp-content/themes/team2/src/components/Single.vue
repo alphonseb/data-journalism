@@ -173,6 +173,7 @@ export default {
     font-size: 6rem;
     p{
         margin: 0;
+        text-align: center;
     }
 }
 
