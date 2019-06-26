@@ -647,6 +647,7 @@ export default {
                     margin-bottom: 2rem;
                     padding-left: 35px;
                     position: relative;
+                    cursor: pointer;
                     &::before{
                         content: '';
                         position: absolute;

@@ -75,6 +75,11 @@ foreach (wp_get_nav_menu_items('footer') as $key => $value) {
 }
 
 ?>
+<div class="loader">
+    <p>Bienvenue sur <strong>Feuille de Route</strong></p>
+    <p>Veuillez patienter pendant le chargement de notre outil révolutionnaire</p>
+    <img src="<?= THEME_PATH ?>/public/loader.gif" alt="">
+</div>
 <div id="app">
     <Home 
         gares-idf="<?= htmlspecialchars($garesIDF_json, ENT_QUOTES, 'UTF-8') ?>" 

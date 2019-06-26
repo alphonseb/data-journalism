@@ -28155,6 +28155,10 @@ var app = new _vue.default({
     Single: _Single.default
   }
 });
+var loader = document.querySelector('.loader');
+window.addEventListener('load', function () {
+  loader.style.display = 'none';
+});
 },{"./config.css":"config.css","vue":"../node_modules/vue/dist/vue.common.js","./components/Home.vue":"components/Home.vue","./components/Single.vue":"components/Single.vue"}],"../../../../../../../Users/Alphonse/AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
