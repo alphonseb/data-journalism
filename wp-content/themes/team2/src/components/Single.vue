@@ -131,6 +131,13 @@ export default {
         transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         backface-visibility: hidden;
         color: var(--dark-blue);
+        height: 100%;
+        overflow-y: auto;
+        display: block;
+        align-items: flex-start;
+        p{
+            margin: 0;
+        }
     }
     &:hover{
         .front{
