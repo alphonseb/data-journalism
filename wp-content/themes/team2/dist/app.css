@@ -391,5 +391,11 @@ p{
   color: white;
   background: var(--dark-blue);
 }
+.graph_large .front[data-v-ecd88d], .graph_small .front[data-v-ecd88d], .photo .front[data-v-ecd88d] {
+  padding: 0;
+}
+.graph_large .front img[data-v-ecd88d] {
+  object-fit: contain;
+}
 
 /*# sourceMappingURL=app.css.map */

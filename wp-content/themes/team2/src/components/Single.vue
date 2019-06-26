@@ -155,5 +155,15 @@ export default {
         background: var(--dark-blue);
     }
 }
+
+.graph_large, .graph_small, .photo{
+    .front{
+        padding: 0;
+    }
+}
+
+.graph_large .front img{
+    object-fit: contain;
+}
 </style>
 
