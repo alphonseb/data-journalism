@@ -690,8 +690,8 @@ header .socials a[data-v-9d1b62]:first-child {
 }
 .vignette-single .back[data-v-ecd88d] {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  left: 0;
+  top: 0;
   transform: translate(-50%, -50%) rotateY(-180deg);
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   backface-visibility: hidden;
@@ -708,7 +708,7 @@ header .socials a[data-v-9d1b62]:first-child {
   transform: rotateY(180deg);
 }
 .vignette-single:hover .back[data-v-ecd88d] {
-  transform: translate(-50%, -50%) rotateY(0);
+  transform: rotateY(0);
 }
 .number .front[data-v-ecd88d], .number .back[data-v-ecd88d], .word .front[data-v-ecd88d], .word .back[data-v-ecd88d], .photo .front[data-v-ecd88d], .photo .back[data-v-ecd88d] {
   color: white;

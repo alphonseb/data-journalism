@@ -151,8 +151,8 @@ export default {
     }
     .back{
         position: absolute;
-        top: 50%;
-        left: 50%;
+        left: 0;
+        top: 0;
         transform: translate(-50%, -50%) rotateY(-180deg);
         transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         backface-visibility: hidden;
@@ -170,7 +170,7 @@ export default {
             transform: rotateY(180deg); 
         }
         .back{
-            transform: translate(-50%, -50%) rotateY(0);
+            transform: rotateY(0);
         }
     }
 }
