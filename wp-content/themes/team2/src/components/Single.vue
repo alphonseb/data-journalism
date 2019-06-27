@@ -153,7 +153,7 @@ export default {
         position: absolute;
         left: 0;
         top: 0;
-        transform: translate(-50%, -50%) rotateY(-180deg);
+        transform: rotateY(-180deg);
         transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         backface-visibility: hidden;
         color: var(--dark-blue);
