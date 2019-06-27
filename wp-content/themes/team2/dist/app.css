@@ -397,6 +397,15 @@ header .socials a[data-v-9d1b62]:first-child {
   margin-bottom: 1.5rem;
   box-shadow: var(--shadow);
 }
+.tool .sidebar-right .article-preview.velo[data-v-cf6cb4] {
+  background: #C8DB55;
+}
+.tool .sidebar-right .article-preview.transports-en-commun[data-v-cf6cb4], .tool .sidebar-right .article-preview.train[data-v-cf6cb4] {
+  background: #4E8FED;
+}
+.tool .sidebar-right .article-preview.voiture-electrique[data-v-cf6cb4], .tool .sidebar-right .article-preview.covoiturage[data-v-cf6cb4] {
+  background: #2FB4B4;
+}
 .tool .sidebar-right .article-preview *[data-v-cf6cb4] {
   transition: opacity 0.2s;
 }
@@ -497,6 +506,15 @@ header .socials a[data-v-9d1b62]:first-child {
   flex-direction: column;
   box-shadow: var(--shadow);
   position: relative;
+}
+.forward-posts-container .forward-posts-single.velo[data-v-cf6cb4] {
+  background: #C8DB55;
+}
+.forward-posts-container .forward-posts-single.transports-en-commun[data-v-cf6cb4], .forward-posts-container .forward-posts-single.train[data-v-cf6cb4] {
+  background: #4E8FED;
+}
+.forward-posts-container .forward-posts-single.voiture-electrique[data-v-cf6cb4], .forward-posts-container .forward-posts-single.covoiturage[data-v-cf6cb4] {
+  background: #2FB4B4;
 }
 @media screen and (max-width: 800px) {
 .forward-posts-container .forward-posts-single[data-v-cf6cb4] {
@@ -733,6 +751,75 @@ header .socials a[data-v-9d1b62]:first-child {
 }
 .graph_small .front img[data-v-ecd88d] {
   max-height: 200px;
+}
+.voiture-electrique .home-link[data-v-ecd88d], .covoiturage .home-link[data-v-ecd88d] {
+  background-color: #2FB4B4;
+}
+.voiture-electrique .front[data-v-ecd88d], .voiture-electrique .back[data-v-ecd88d], .covoiturage .front[data-v-ecd88d], .covoiturage .back[data-v-ecd88d] {
+  border-color: #076E6E;
+}
+.voiture-electrique .number .front[data-v-ecd88d], .voiture-electrique .number .back[data-v-ecd88d], .covoiturage .number .front[data-v-ecd88d], .covoiturage .number .back[data-v-ecd88d] {
+  background-color: #6AE2E2;
+}
+.voiture-electrique .word .front[data-v-ecd88d], .voiture-electrique .word .back[data-v-ecd88d], .covoiturage .word .front[data-v-ecd88d], .covoiturage .word .back[data-v-ecd88d] {
+  background-color: #2FB4B4;
+}
+.voiture-electrique .graph_large .back[data-v-ecd88d], .covoiturage .graph_large .back[data-v-ecd88d] {
+  color: #2FB4B4;
+}
+.voiture-electrique .graph_small .back[data-v-ecd88d], .covoiturage .graph_small .back[data-v-ecd88d] {
+  color: #6AE2E2;
+}
+.voiture-electrique .photo .front[data-v-ecd88d], .voiture-electrique .photo .back[data-v-ecd88d], .covoiturage .photo .front[data-v-ecd88d], .covoiturage .photo .back[data-v-ecd88d] {
+  background-color: rgba(47, 180, 180, 0.47);
+}
+.train .home-link[data-v-ecd88d], .transports-en-commun .home-link[data-v-ecd88d] {
+  background-color: #4E8FED;
+}
+.train .front[data-v-ecd88d], .train .back[data-v-ecd88d], .transports-en-commun .front[data-v-ecd88d], .transports-en-commun .back[data-v-ecd88d] {
+  border-color: #3161A5;
+}
+.train .number .front[data-v-ecd88d], .train .number .back[data-v-ecd88d], .transports-en-commun .number .front[data-v-ecd88d], .transports-en-commun .number .back[data-v-ecd88d] {
+  background-color: #4E8FED;
+}
+.train .word .front[data-v-ecd88d], .train .word .back[data-v-ecd88d], .transports-en-commun .word .front[data-v-ecd88d], .transports-en-commun .word .back[data-v-ecd88d] {
+  background-color: #3161A5;
+}
+.train .graph_large .back[data-v-ecd88d], .transports-en-commun .graph_large .back[data-v-ecd88d] {
+  color: #0D2C61;
+}
+.train .graph_small .back[data-v-ecd88d], .transports-en-commun .graph_small .back[data-v-ecd88d] {
+  color: #6686B3;
+}
+.train .photo .front[data-v-ecd88d], .train .photo .back[data-v-ecd88d], .transports-en-commun .photo .front[data-v-ecd88d], .transports-en-commun .photo .back[data-v-ecd88d] {
+  background-color: #4E8FED;
+}
+.velo .home-link[data-v-ecd88d] {
+  background-color: #C8DB55;
+}
+.velo .front[data-v-ecd88d], .velo .back[data-v-ecd88d] {
+  border-color: #869533;
+}
+.velo .number .front[data-v-ecd88d], .velo .number .back[data-v-ecd88d] {
+  background-color: #DCF168;
+}
+.velo .number .back[data-v-ecd88d] {
+  color: #42413db9;
+}
+.velo .word .front[data-v-ecd88d], .velo .word .back[data-v-ecd88d] {
+  background-color: #AABD40;
+}
+.velo .graph_large .back[data-v-ecd88d] {
+  color: #AABD40;
+}
+.velo .graph_small .back[data-v-ecd88d] {
+  color: #C8DB55;
+}
+.velo .photo .front[data-v-ecd88d], .velo .photo .back[data-v-ecd88d] {
+  background-color: #F4FFB7;
+}
+.velo .photo .back[data-v-ecd88d] {
+  color: #42413db9;
 }
 .archive[data-v-244dbb] {
   max-width: 120rem;

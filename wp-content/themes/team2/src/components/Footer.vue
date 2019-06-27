@@ -25,7 +25,7 @@
                 <nav>
                     <ul>
                         <li v-for="_menuItem in menu" :key="_menuItem.id">
-                            <a :href="_menuItem.url">{{_menuItem.title}}</a>
+                            <a href="#">{{_menuItem.title}}</a>
                         </li>
                     </ul>
                 </nav>

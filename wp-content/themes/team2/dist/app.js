@@ -26712,7 +26712,7 @@ exports.default = _default;
             "ul",
             _vm._l(_vm.menu, function(_menuItem) {
               return _c("li", { key: _menuItem.id }, [
-                _c("a", { attrs: { href: _menuItem.url } }, [
+                _c("a", { attrs: { href: "#" } }, [
                   _vm._v(_vm._s(_menuItem.title))
                 ])
               ])
@@ -27729,21 +27729,29 @@ exports.default = _default;
             _c("div", { attrs: { id: "map" } }),
             _vm._v(" "),
             _c("div", { staticClass: "sidebar-right" }, [
-              _c("div", { ref: "preview", staticClass: "article-preview" }, [
-                _c("h3", [
-                  _vm._v(_vm._s(_vm.replaceQuote(_vm.displayedPost.title)))
-                ]),
-                _vm._v(" "),
-                _c("p", [_vm._v(_vm._s(_vm.displayedPost.incent))]),
-                _vm._v(" "),
-                _c("img", {
-                  attrs: { src: _vm.displayedPost.thumbnail_url, alt: "" }
-                }),
-                _vm._v(" "),
-                _c("a", { attrs: { href: _vm.displayedPost.permalink } }, [
-                  _vm._v("En savoir plus")
-                ])
-              ]),
+              _c(
+                "div",
+                {
+                  ref: "preview",
+                  staticClass: "article-preview",
+                  class: _vm.displayedPost.transport_type
+                },
+                [
+                  _c("h3", [
+                    _vm._v(_vm._s(_vm.replaceQuote(_vm.displayedPost.title)))
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v(_vm._s(_vm.displayedPost.incent))]),
+                  _vm._v(" "),
+                  _c("img", {
+                    attrs: { src: _vm.displayedPost.thumbnail_url, alt: "" }
+                  }),
+                  _vm._v(" "),
+                  _c("a", { attrs: { href: _vm.displayedPost.permalink } }, [
+                    _vm._v("En savoir plus")
+                  ])
+                ]
+              ),
               _vm._v(" "),
               _vm._m(5)
             ])
@@ -27831,7 +27839,11 @@ exports.default = _default;
             _vm._l(_vm.forwardPosts, function(_post) {
               return _c(
                 "div",
-                { key: _post.ID, staticClass: "forward-posts-single" },
+                {
+                  key: _post.ID,
+                  staticClass: "forward-posts-single",
+                  class: _post.transport_type
+                },
                 [
                   _c("img", {
                     attrs: { src: _post.post_thumbnail_url, alt: "" }
@@ -28022,16 +28034,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
 var _default = {
   name: 'Single',
   props: {
     title: String,
     excerpt: String,
-    thumbnail_url: String,
     vignettes_string: String,
     homeUrl: String,
-    footerMenu: String
+    footerMenu: String,
+    transportType: String
   },
   components: {
     Header: _Header.default,
@@ -28067,7 +28078,7 @@ exports.default = _default;
     [
       _c(
         "div",
-        { staticClass: "single" },
+        { staticClass: "single", class: _vm.transportType },
         [
           _c("Header", { attrs: { "home-url": _vm.homeUrl } }),
           _vm._v(" "),
@@ -28080,8 +28091,6 @@ exports.default = _default;
           _c("p", [
             _vm._v("\r\n            " + _vm._s(_vm.excerpt) + "\r\n        ")
           ]),
-          _vm._v(" "),
-          _c("img", { attrs: { src: _vm.thumbnail_url, alt: "" } }),
           _vm._v(" "),
           _c(
             "div",

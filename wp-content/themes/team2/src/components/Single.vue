@@ -1,13 +1,12 @@
 <template>
 <div>
-    <div class="single">
+    <div class="single" :class="transportType">
         <Header :home-url="homeUrl"></Header>
         <a class="home-link" :href="homeUrl">Revenir à l'accueil</a>
         <h1>{{ title }}</h1>
         <p>
             {{excerpt}}
         </p>
-        <img :src="thumbnail_url" alt="">
         <div class="vignettes-container">
             <div v-for="_vignette in vignettes" :key="_vignette.id" :class="_vignette.type" class="vignette-single">
                 <div class="front">
@@ -31,10 +30,10 @@ export default {
     props: {
         title: String,
         excerpt: String,
-        thumbnail_url: String,
         vignettes_string: String,
         homeUrl: String,
-        footerMenu: String
+        footerMenu: String,
+        transportType: String
     },
     components: {
         Header,
@@ -208,6 +207,112 @@ export default {
 .graph_small .front{
     img{
         max-height: 200px;
+    }
+}
+
+.voiture-electrique, .covoiturage{
+    .home-link{
+        background-color: #2FB4B4;
+    }
+    .front, .back{
+        border-color: #076E6E;
+    }
+    .number{
+        .front, .back{
+            background-color: #6AE2E2;
+        }
+    }
+    .word{
+        .front, .back{
+            background-color: #2FB4B4;
+        }
+    }
+    .graph_large{
+        .back{
+            color: #2FB4B4;
+        }
+    }
+    .graph_small{
+        .back{
+            color: #6AE2E2;
+        }
+    }
+    .photo{
+        .front, .back{
+            background-color: rgb(47, 180, 180, 0.47);
+        }
+    }
+}
+.train, .transports-en-commun{
+    .home-link{
+        background-color: #4E8FED;
+    }
+    .front, .back{
+        border-color: #3161A5;
+    }
+    .number{
+        .front, .back{
+            background-color: #4E8FED;
+        }
+    }
+    .word{
+        .front, .back{
+            background-color: #3161A5;
+        }
+    }
+    .graph_large{
+        .back{
+            color: #0D2C61;
+        }
+    }
+    .graph_small{
+        .back{
+            color: #6686B3;
+        }
+    }
+    .photo{
+        .front, .back{
+            background-color: #4E8FED;
+        }
+    }
+}
+.velo{
+    .home-link{
+        background-color: #C8DB55;
+    }
+    .front, .back{
+        border-color: #869533;
+    }
+    .number{
+        .front, .back{
+            background-color: #DCF168;
+        }
+        .back{
+            color: #42413db9;
+        }
+    }
+    .word{
+        .front, .back{
+            background-color: #AABD40;
+        }
+    }
+    .graph_large{
+        .back{
+            color: #AABD40;
+        }
+    }
+    .graph_small{
+        .back{
+            color: #C8DB55;
+        }
+    }
+    .photo{
+        .front, .back{
+            background-color: #F4FFB7;
+        }
+        .back{
+            color: #42413db9;
+        }
     }
 }
 </style>

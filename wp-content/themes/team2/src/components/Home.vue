@@ -52,7 +52,7 @@
                 </div>
                 <div id="map"></div>
                 <div class="sidebar-right">
-                    <div class="article-preview" ref="preview">
+                    <div class="article-preview" ref="preview" :class="displayedPost.transport_type">
                         <h3>{{replaceQuote(displayedPost.title)}}</h3>
                         <p>{{displayedPost.incent}}</p>
                         <img :src="displayedPost.thumbnail_url" alt="">
@@ -84,7 +84,7 @@
             </div>
             <h2>Découvrez plus d'articles</h2>
             <div class="forward-posts-container">
-                <div class="forward-posts-single" v-for="_post in forwardPosts" :key="_post.ID">
+                <div class="forward-posts-single" v-for="_post in forwardPosts" :class="_post.transport_type" :key="_post.ID">
                     <img :src="_post.post_thumbnail_url" alt="">
                     <h3>{{_post.post_title}}</h3>
                     <p>{{_post.post_excerpt}}</p>
@@ -739,6 +739,15 @@ export default {
                 padding: 2rem 1.5rem;
                 margin-bottom: 1.5rem;
                 box-shadow: var(--shadow);
+                &.velo{
+                    background: #C8DB55;
+                }
+                &.transports-en-commun, &.train{
+                    background: #4E8FED;
+                }
+                &.voiture-electrique, &.covoiturage{
+                    background: #2FB4B4;
+                }
                 * {
                     transition: opacity 0.2s;
                 }
@@ -842,6 +851,15 @@ export default {
             flex-direction: column;
             box-shadow: var(--shadow);
             position: relative;
+            &.velo{
+                background: #C8DB55;
+            }
+            &.transports-en-commun, &.train{
+                background: #4E8FED;
+            }
+            &.voiture-electrique, &.covoiturage{
+                background: #2FB4B4;
+            }
             @media screen and (max-width: 800px){
                 width: 100%;
                 margin-bottom: 3rem;

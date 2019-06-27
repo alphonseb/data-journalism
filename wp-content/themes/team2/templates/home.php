@@ -63,6 +63,7 @@ foreach (get_field('forward_posts') as $post_key => $post) {
     }
     $forward_posts[$post_key]['post_thumbnail_url'] = get_the_post_thumbnail_url(get_the_ID(), 'list-thumbnail');
     $forward_posts[$post_key]['post_url'] = get_the_permalink();
+    $forward_posts[$post_key]['transport_type'] = get_the_terms(get_the_ID(), 'category')[0]->slug;
 }
 wp_reset_postdata();
 
@@ -84,18 +85,6 @@ foreach (wp_get_nav_menu_items('footer') as $key => $value) {
     <img src="<?= THEME_URL ?>/public/loader.gif" alt="">
 </div>
 <div id="app">
-    <Home 
-        gares-idf="<?= htmlspecialchars($garesIDF_json, ENT_QUOTES, 'UTF-8') ?>" 
-        parking-velo="<?= htmlspecialchars($parkingVelo_json, ENT_QUOTES, 'UTF-8') ?>" 
-        velo-libres="<?= htmlspecialchars($veloLibres_json, ENT_QUOTES, 'UTF-8') ?>" 
-        covoit="<?= htmlspecialchars($covoit_json, ENT_QUOTES, 'UTF-8') ?>" 
-        elec="<?= htmlspecialchars($elec_json, ENT_QUOTES, 'UTF-8') ?>" 
-        gares-france="<?= htmlspecialchars($garesFrance_json, ENT_QUOTES, 'UTF-8') ?>" 
-        forward-posts-string="<?= htmlspecialchars(json_encode($forward_posts), ENT_QUOTES, 'UTF-8') ?>" 
-        all-posts-string="<?= htmlspecialchars(json_encode($all_posts), ENT_QUOTES, 'UTF-8') ?>" 
-        footer-menu="<?= htmlspecialchars(json_encode($footerMenu), ENT_QUOTES, 'UTF-8') ?>" 
-        home-url="<?= $home_url ?>"
-        archive-url="<?= $archive_url ?>"
-    >
+    <Home gares-idf="<?= htmlspecialchars($garesIDF_json, ENT_QUOTES, 'UTF-8') ?>" parking-velo="<?= htmlspecialchars($parkingVelo_json, ENT_QUOTES, 'UTF-8') ?>" velo-libres="<?= htmlspecialchars($veloLibres_json, ENT_QUOTES, 'UTF-8') ?>" covoit="<?= htmlspecialchars($covoit_json, ENT_QUOTES, 'UTF-8') ?>" elec="<?= htmlspecialchars($elec_json, ENT_QUOTES, 'UTF-8') ?>" gares-france="<?= htmlspecialchars($garesFrance_json, ENT_QUOTES, 'UTF-8') ?>" forward-posts-string="<?= htmlspecialchars(json_encode($forward_posts), ENT_QUOTES, 'UTF-8') ?>" all-posts-string="<?= htmlspecialchars(json_encode($all_posts), ENT_QUOTES, 'UTF-8') ?>" footer-menu="<?= htmlspecialchars(json_encode($footerMenu), ENT_QUOTES, 'UTF-8') ?>" home-url="<?= $home_url ?>" archive-url="<?= $archive_url ?>">
     </Home>
 </div>
