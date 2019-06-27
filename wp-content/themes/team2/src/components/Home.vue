@@ -8,12 +8,15 @@
                     Grâce à <strong>Feuille de Route</strong> vous pouvez découvrir toutes les informations sur le developpement durable et les transports, et choisir la meilleur alternative aux transports polluants pour votre trajet !
                 </p>
             </div>
+            <p class="indicator indicator-1">1) Choisissez votre type de trajet</p>
             <div class="transport-types">
                 <input name="serviceType" type="radio" @change="changeServiceType" id="quotidien" checked>
                 <h2><label for="quotidien">Trajets du quotidien en Ile de France</label></h2>
                 <input name="serviceType" type="radio" @change="changeServiceType" id="france">
                 <h2><label for="france">Trajets sur la France</label></h2>
             </div>
+            <p class="indicator indicator-2">2) Amusez-vous avec les filtres</p>
+            <p class="indicator indicator-3">3) Apprenez plein de choses grâce à nos articles</p>
             <div class="tool">
                 <div class="sidebar-left" :class="{'flex-start': endPointGeometry.lat !== null}">
                     <div class="locations">
@@ -541,6 +544,46 @@ export default {
 
 <style lang="scss" scoped>
 
+    .indicator{
+        font-family: var(--cursive-font);
+        font-size: 1.8rem;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 35px;
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 30px;
+            height: 30px;
+            background-image: url(../imgs/arrow-round.png);
+        }
+        &.indicator-1{
+            left: 20%;
+            margin-bottom: 0;
+            &::after{
+                left: 40%;
+                transform: rotate(25deg);
+            }
+        }
+        &.indicator-2{
+            left: -8%;
+            margin-bottom: 1rem;
+            &::after{
+                transform: rotate(30deg);
+                left: 20%;
+            }
+        }
+        &.indicator-3{
+            margin-bottom: 1rem;
+            left: 50%;
+            &::after{
+                left: 75%;
+                transform: scaleX(-1) rotate(30deg);
+            }
+        }
+    }
+
     .home{
         margin: 0 auto;
         max-width: 120rem;
@@ -744,6 +787,7 @@ export default {
     
     .title{
         text-align: center;
+        margin-bottom: 2rem;
         p{
             font-style: italic;
         }

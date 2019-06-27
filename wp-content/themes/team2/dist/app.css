@@ -1,5 +1,6 @@
 :root{
     --main-font: 'Montserrat', sans-serif;
+    --cursive-font: 'Gloria Hallelujah', cursive;
     --green: #AABD40;
     --dark-blue: #448FAE;
     --light-blue: #66B1D0;
@@ -152,6 +153,45 @@ header .socials a svg[data-v-9d1b62] {
   font-weight: bold;
   text-decoration: none;
   font-size: 1.5rem;
+}
+.indicator[data-v-cf6cb4] {
+  font-family: var(--cursive-font);
+  font-size: 1.8rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 35px;
+}
+.indicator[data-v-cf6cb4]::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url(arrow-round.5f6ca25f.png);
+}
+.indicator.indicator-1[data-v-cf6cb4] {
+  left: 20%;
+  margin-bottom: 0;
+}
+.indicator.indicator-1[data-v-cf6cb4]::after {
+  left: 40%;
+  transform: rotate(25deg);
+}
+.indicator.indicator-2[data-v-cf6cb4] {
+  left: -8%;
+  margin-bottom: 1rem;
+}
+.indicator.indicator-2[data-v-cf6cb4]::after {
+  transform: rotate(30deg);
+  left: 20%;
+}
+.indicator.indicator-3[data-v-cf6cb4] {
+  margin-bottom: 1rem;
+  left: 50%;
+}
+.indicator.indicator-3[data-v-cf6cb4]::after {
+  left: 75%;
+  transform: scaleX(-1) rotate(30deg);
 }
 .home[data-v-cf6cb4] {
   margin: 0 auto;
@@ -349,6 +389,7 @@ header .socials a svg[data-v-9d1b62] {
 }
 .title[data-v-cf6cb4] {
   text-align: center;
+  margin-bottom: 2rem;
 }
 .title p[data-v-cf6cb4] {
   font-style: italic;

@@ -26889,6 +26889,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
 var _default = {
   name: 'Home',
   components: {
@@ -27540,6 +27543,10 @@ exports.default = _default;
           _vm._v(" "),
           _vm._m(0),
           _vm._v(" "),
+          _c("p", { staticClass: "indicator indicator-1" }, [
+            _vm._v("1) Choisissez votre type de trajet")
+          ]),
+          _vm._v(" "),
           _c("div", { staticClass: "transport-types" }, [
             _c("input", {
               attrs: {
@@ -27559,6 +27566,14 @@ exports.default = _default;
             }),
             _vm._v(" "),
             _vm._m(2)
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "indicator indicator-2" }, [
+            _vm._v("2) Amusez-vous avec les filtres")
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "indicator indicator-3" }, [
+            _vm._v("3) Apprenez plein de choses grâce à nos articles")
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "tool" }, [
@@ -27959,7 +27974,7 @@ render._withStripped = true
       
       }
     })();
-},{"leaflet":"../node_modules/leaflet/dist/leaflet-src.js","./Header":"components/Header.vue","./Footer":"components/Footer.vue","./..\\imgs\\check.png":[["check.d0c2d9fc.png","imgs/check.png"],"imgs/check.png"],"./..\\imgs\\arrow.png":[["arrow.a57d9086.png","imgs/arrow.png"],"imgs/arrow.png"],"./..\\imgs\\arrow-blue.png":[["arrow-blue.c92f9e6c.png","imgs/arrow-blue.png"],"imgs/arrow-blue.png"],"_css_loader":"../../../../../../../Users/Alphonse/AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Single.vue":[function(require,module,exports) {
+},{"leaflet":"../node_modules/leaflet/dist/leaflet-src.js","./Header":"components/Header.vue","./Footer":"components/Footer.vue","./..\\imgs\\arrow-round.png":[["arrow-round.5f6ca25f.png","imgs/arrow-round.png"],"imgs/arrow-round.png"],"./..\\imgs\\check.png":[["check.d0c2d9fc.png","imgs/check.png"],"imgs/check.png"],"./..\\imgs\\arrow.png":[["arrow.a57d9086.png","imgs/arrow.png"],"imgs/arrow.png"],"./..\\imgs\\arrow-blue.png":[["arrow-blue.c92f9e6c.png","imgs/arrow-blue.png"],"imgs/arrow-blue.png"],"_css_loader":"../../../../../../../Users/Alphonse/AppData/Local/Yarn/Data/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.common.js"}],"components/Single.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28187,7 +28202,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60031" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54130" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
