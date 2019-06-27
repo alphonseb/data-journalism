@@ -91,8 +91,10 @@
                     <a :href="_post.post_url">En savoir plus</a>
                 </div>
             </div>
+            <div class="link-container">
+                <a class="all-posts" :href="archiveUrl">Voir tous nos articles</a>
+            </div>
         </div>
-    
         <Footer :footer-menu="footerMenu"></Footer>
     </div>
 </template>
@@ -146,6 +148,7 @@ export default {
     },
     props: {
         homeUrl: String,
+        archiveUrl: String,
         covoit: String,
         elec: String,
         garesFrance: String,
@@ -550,6 +553,9 @@ export default {
         position: relative;
         display: inline-block;
         padding-bottom: 35px;
+        @media screen and (max-width: 800px) {
+            display: none;
+        }
         &::after{
             content: '';
             position: absolute;
@@ -588,16 +594,27 @@ export default {
         margin: 0 auto;
         max-width: 120rem;
         margin-bottom: 7rem;
+        @media screen and (max-width: 800px){
+            padding: 0 2rem;
+        }
     }
     #map{
         width: 550px;
         box-shadow: var(--shadow);
         border-radius: 4px;
+        @media screen and (max-width: 800px) {
+            width: 100%;
+            height: 400px;
+        }
     }
     .transport-types{
         display: flex;
         align-items: flex-end;
         justify-content: center;
+        @media screen and (max-width: 800px) {
+            flex-direction: column;
+            align-items: center;
+        }
         h2{
             padding: 1rem;
             border-radius: 50px;
@@ -610,6 +627,10 @@ export default {
             }
             &:first-of-type{
                 margin-right: 2rem;
+            }
+            @media screen and (max-width: 800px) {
+                margin-bottom: 1rem;
+                margin-right: 0;
             }
         }
         input[type="radio"]{
@@ -628,6 +649,7 @@ export default {
         max-width: 120rem;
         margin: 0 auto;
         margin-bottom: 3rem;
+        
         .field{
             label{
                 font-weight: bold;
@@ -708,6 +730,9 @@ export default {
         .sidebar-right{
             max-width: 300px;
             color: white;
+            @media screen and (max-width: 800px) {
+                order: 3;
+            }
             .article-preview{
                 background-color: var(--light-blue);
                 border-radius: 4px;
@@ -783,11 +808,18 @@ export default {
                 }
             }
         }
+        @media screen and (max-width: 800px){
+            flex-direction: column;
+            &>*{
+                width: 100%!important;
+                max-width: 100%!important;
+            }
+        }
     }
     
     .title{
         text-align: center;
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
         p{
             font-style: italic;
         }
@@ -796,6 +828,10 @@ export default {
     .forward-posts-container{
         display: flex;
         justify-content: space-between;
+        margin-bottom: 5rem;
+        @media screen and (max-width: 800px){
+            flex-direction: column;
+        }
         .forward-posts-single{
             width: 30%;
             padding: 1.5rem 2rem;
@@ -806,6 +842,10 @@ export default {
             flex-direction: column;
             box-shadow: var(--shadow);
             position: relative;
+            @media screen and (max-width: 800px){
+                width: 100%;
+                margin-bottom: 3rem;
+            }
             img{
                 width: 100%;
             }
@@ -863,6 +903,29 @@ export default {
                 width: 16px;
                 height: 16px;
             }
+        }
+    }
+    
+    .link-container{
+        text-align: center;
+    }
+    
+    .all-posts{
+        display: inline-block;
+        margin: 0 auto;
+        padding: 1.5rem;
+        background-color: var(--green);
+        color: white;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: transform 0.2s;
+        &:hover{
+            box-shadow: var(--shadow);
+            transform: translateY(-5px);
+        }
+        &:active{
+            transform: translateY(0);
+            box-shadow: none;
         }
     }
 </style>

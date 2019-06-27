@@ -60,6 +60,9 @@ export default {
     max-width: 120rem;
     margin: 0 auto;
     margin-bottom: 6rem;
+    @media screen and (max-width: 800px) {
+        padding: 0 2rem;
+    }
 }
 
 .home-link{
@@ -107,7 +110,14 @@ export default {
     .number { grid-area: 1 / 2 / 2 / 3; } 
     .graph_small { grid-area: 1 / 3 / 2 / 4; } 
     .word { grid-area: 2 / 2 / 3 / 4; } 
-    .photo { grid-area: 1 / 4 / 3 / 5; } 
+    .photo { grid-area: 1 / 4 / 3 / 5; }
+    @media screen and (max-width: 800px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        .vignette-single{
+            grid-area: initial;
+        }
+    } 
 }
 
 .vignette-single{
@@ -192,6 +202,13 @@ export default {
 
 .word .front{
     font-size: 4rem;
+    text-align: center;
+}
+
+.graph_small .front{
+    img{
+        max-height: 200px;
+    }
 }
 </style>
 

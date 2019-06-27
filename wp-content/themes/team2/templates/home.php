@@ -1,6 +1,7 @@
 <?php
 
 $home_url = get_home_url();
+$archive_url = get_permalink(get_page_by_title('archive'));
 
 $all_posts =  [];
 $args = [
@@ -74,6 +75,8 @@ foreach (wp_get_nav_menu_items('footer') as $key => $value) {
     ];
 }
 
+
+
 ?>
 <div class="loader">
     <p>Bienvenue sur <strong>Feuille de Route</strong></p>
@@ -91,6 +94,8 @@ foreach (wp_get_nav_menu_items('footer') as $key => $value) {
         forward-posts-string="<?= htmlspecialchars(json_encode($forward_posts), ENT_QUOTES, 'UTF-8') ?>" 
         all-posts-string="<?= htmlspecialchars(json_encode($all_posts), ENT_QUOTES, 'UTF-8') ?>" 
         footer-menu="<?= htmlspecialchars(json_encode($footerMenu), ENT_QUOTES, 'UTF-8') ?>" 
-        home-url="<?= $home_url ?>">
+        home-url="<?= $home_url ?>"
+        archive-url="<?= $archive_url ?>"
+    >
     </Home>
 </div>

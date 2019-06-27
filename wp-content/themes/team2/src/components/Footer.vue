@@ -65,6 +65,7 @@ export default {
     h4{
         margin-right: 2rem;
     }
+    
     input{
         padding: 1rem;
         margin-right: 1rem;
@@ -73,6 +74,9 @@ export default {
         border: none;
         box-shadow: none;
         min-width: 250px;
+        @media screen and (max-width: 420px){
+            margin-bottom: 1rem;
+        }
     }
     button{
         border: none;
@@ -86,6 +90,15 @@ export default {
         padding: 1rem;
         cursor: pointer;
     }
+    @media screen and (max-width: 800px) {
+        .container{
+            padding: 0 2rem;
+            flex-wrap: wrap;
+            h4{
+                width: 100%;
+            }
+        }
+    }
 }
 .links{
     background-color: var(--dark-blue);
@@ -97,6 +110,7 @@ export default {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        
         .socials{
             display: flex;
             align-items: center;
@@ -110,6 +124,7 @@ export default {
         nav{
             ul{
                 display: flex;
+                padding-left: 0;
                 li{
                     list-style: none;
                     margin-left: 3rem;
@@ -120,6 +135,13 @@ export default {
                         font-size: 1.5rem;
                     }
                 }
+            }
+        }
+        @media screen and (max-width: 800px) {
+            flex-wrap: wrap;
+            .socials{
+                width: 100%;
+                justify-content: center;
             }
         }
     }

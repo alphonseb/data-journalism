@@ -3,8 +3,8 @@
         <div class="logo">
             <a :href="homeUrl">
                 <img :src="`${baseUrl}/logo.png`" alt="">
+                <span>Feuille de route</span>
             </a>
-            <span>Feuille de route</span>
         </div>
         <div class="socials">
             <a href="">
@@ -51,8 +51,15 @@ header{
         color: var(--green);
         font-weight: bold;
         font-size: 2rem;
+        a{
+            display: flex;
+            align-items: center;
+            color: inherit;
+            text-decoration: none;
+        }
     }
     .socials{
+        
         a{
             display: inline-flex;
             justify-content: center;
@@ -64,6 +71,13 @@ header{
             svg{
                 width: 16px;
                 height: 16px;
+            }
+        }
+        @media screen and (max-width: 450px) {
+            display: flex;
+            flex-direction: column;
+            a:first-child{
+                margin-bottom: 0.5rem;
             }
         }
     }
